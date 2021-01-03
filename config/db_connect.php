@@ -1,5 +1,5 @@
 <?php 
-    $conn = mysqli_connect('localhost','amit','amit2424','portal_data');
+    $conn = mysqli_connect('localhost','ecell_neo','4epl2L5^','portal_data');
     
     //check connection
     if(!$conn){
