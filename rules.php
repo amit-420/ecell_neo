@@ -1,6 +1,7 @@
 <?php
 include('config/db_connect.php');
 include('config/session_verification.php');
+include('Questionarray.php');
 if(isset($_POST['to_portal'])){
 
     header('Location: portal.php');
@@ -29,7 +30,7 @@ if(isset($_POST['to_portal'])){
 
 </head>
     <?php
-    if($_SESSION['payment_status'] == True and $_SESSION['exam_status'] == false) {?>
+    if($_SESSION['payment_status'] == True and $_SESSION['exam_status'] == false and in_array($_SESSION['mem_clgname'],$allowed_schools)) {?>
     <body id="rules-body">
       <nav class="navbar navbar-expand-lg navbar-light ">
         <a class="navbar-brand" href="#">
@@ -76,7 +77,7 @@ if(isset($_POST['to_portal'])){
         </div>
 
     </body>
-    <?php } else if($_SESSION['payment_status'] == true and $_SESSION['exam_status'] == true){?>
+    <?php } else if($_SESSION['payment_status'] == true and $_SESSION['exam_status'] == true ){?>
       <body>
 
         <nav class="navbar navbar-expand-lg navbar-light ">
@@ -91,7 +92,22 @@ if(isset($_POST['to_portal'])){
           </form>
 
       </body>
-    <?php }?>
+    <?php } else if(!in_array($_SESSION['mem_clgname'],$allowed_schools) and $_SESSION['payment_status'] == true){ ?>
+      <body>
+
+          <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="#">
+              <img src="images/log.png" alt="NEO logo" style="height: 70px;"/>
+            </a>
+
+          </nav>
+            <h4 class="text-center pt-4">Sorry your exam is not sheduled now, Checkout the timetable below</h4>
+            <form action="rules.php" class="text-center pt-4" method="POST">
+                <input type="submit" class="btn btn-primary" name="loginpage" value="Login Again" >
+            </form>
+
+      </body>
+    <?php } ?>
 
 
   <!-- Bootstrap javascript -->

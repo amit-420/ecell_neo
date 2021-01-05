@@ -53,11 +53,11 @@
 			// Here we will check if student has logged in in designeted time;
 			
 			
-			if(!in_array($row['mem_clgname'],$allowed_schools)){
-				echo "exam not started yet";
-				header("Location: ../timetable.php");
+			//if(!in_array($row['mem_clgname'],$allowed_schools)){
+				//echo "exam not started yet";
+				//header("Location: ../timetable.php");
 			
-			}else{
+			//}else{
 				session_start();
 				$_SESSION['mem_email'] = $row['mem_email'];
 				$_SESSION['selected_q_np'];
@@ -69,7 +69,7 @@
 				$_SESSION['exam_status'] = $row['exam_status'];
 				header("location:../rules.php");
 				echo " U are Logged in";
-			}
+			//}
 		
 		
 		}else{

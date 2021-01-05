@@ -38,39 +38,39 @@
             array("2","3"),
             array("3","2"),
             array("4","2"),
-            array("5", "1"),
+            array("5","1"),
             array("6","2"),
             array("7","3"),
             array("8","2"),
             array("9","2"),
-            array("10", "1"),
+            array("10","1"),
             array("11","2"),
             array("12","3"),
             array("13","2"),
             array("14","2"),
-            array("15", "1"),
+            array("15","1"),
             array("16","2"),
             array("17","3"),
             array("18","2"),
             array("19","2"),
-            array("20", "1"),
+            array("20","1"),
             array("21","2"),
             array("22","3"),
             array("23","2"),
             array("24","2"),
-            array("25", "1"),
+            array("25","1"),
             array("26","2"),
             array("27","3"),
             array("28","2"),
             array("29","2"),
-            array("30", "1"),
+            array("30","1"),
         );
 
         date_default_timezone_set("Asia/Kolkata");
         $marks_of_each_qn = 4;
         $_SESSION['answer_of _questions'] = array();
 
-        $allowed_schools = array("vnit","vit","iiit");
+        $allowed_schools = array("vnit1","vit","iiit");
 
         $now = time();
         // echo date("d-m-y H:i:s", $now) . "<br>";
