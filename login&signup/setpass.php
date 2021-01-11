@@ -51,7 +51,8 @@ if (isset($_POST['changepassButton'])) {
     $mem_new_pass=$_POST["mem_new_pass"];
     $mem_conf_pass=$_POST["mem_conf_pass"];
     if($mem_new_pass == $mem_conf_pass){
-        account_creation($db_connect);
+		$mem_pass = $mem_conf_pass;
+        account_creation($db_connect,$mem_pass);
         header("location:login.php");    
         
   

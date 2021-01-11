@@ -15,14 +15,14 @@
 			$_SESSION['mem_email'] = $_POST['mem_email'];
 			$email= $_SESSION['mem_email'];
 			
-			$_SESSION['userdata'] = array($_POST['mem_name'],$_POST['mem_email'],$_POST['mem_number'],$_POST['mem_pass'],$_POST['mem_clgname']);
+			$_SESSION['userdata'] = array($_POST['mem_name'],$_POST['mem_email'],$_POST['mem_number'],$_POST['mem_clgname']);
 
 			$query_select = mysqli_query($db_connect, "SELECT * from user_login_data where mem_email = '$email' ");
 
 			$checkpoint = mysqli_num_rows($query_select);
 
 			echo $checkpoint;
-
+		
 			if ($checkpoint==0) {
 				header("Location:otp.php");
 				//account_creation($db_connect);
