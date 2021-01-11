@@ -50,7 +50,7 @@ if(isset($_POST['to_portal'])){
          varius natoque penatibus et magnis dis parturient montes,
          nascetur ridiculus mus. In quis hendrerit mi, nec feugiat
          sem. Donec a ipsum eu nibh venenatis commodo. Sed non
-         interdum diam, vel scelerisque mi. </p>
+         interdum diam, vel scelerisque mi.</p>
 
          <p>
            <strong class="semi-bold">Make sure you understand the instructions before starting the exam.</strong>

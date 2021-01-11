@@ -70,7 +70,7 @@
         $marks_of_each_qn = 4;
         $_SESSION['answer_of _questions'] = array();
 
-        $allowed_schools = array("vnit1","vit","iiit");
+        $allowed_schools = array("vnit","vit","iiit");
 
         $now = time();
         // echo date("d-m-y H:i:s", $now) . "<br>";
