@@ -4,7 +4,7 @@
 		$mem_name = $_SESSION['userdata'][0];
 		$mem_email = $_SESSION['userdata'][1];
 		$mem_number = $_SESSION['userdata'][2];
-		$mem_pass = $_SESSION['userdata'][3];
+		$mem_pass = sha1($_SESSION['userdata'][3]);
 		$mem_clgname = $_SESSION['userdata'][4];
 
 		
