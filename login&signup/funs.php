@@ -1,11 +1,11 @@
 <?php 
-	function account_creation($db_connect){
+	function account_creation($db_connect,$mem_pass){
 	
-		$mem_name = $_POST['mem_name'];
-		$mem_email = $_POST['mem_email'];
-		$mem_number = $_POST['mem_number'];
-		$mem_pass = sha1($_POST['mem_pass']);
-		$mem_clgname = $_POST['mem_clgname'];
+		$mem_name = $_SESSION['userdata'][0];
+		$mem_email = $_SESSION['userdata'][1];
+		$mem_number = $_SESSION['userdata'][2];
+		$mem_pass = sha1($mem_pass);
+		$mem_clgname = $_SESSION['userdata'][3];
 
 		
 		$query = "INSERT INTO user_login_data
@@ -19,7 +19,7 @@
 		$success = "Account created! Please check your inbox to verify your email address.";
 		$sub="Confirmemail";
 		$event="Welcome ur email is confirmed";
-		//htmlMail($mem_email,$sub,$mem_name,"",$event);
+		//htmlMail($mem_email,$sub,$mem_name,"",$event); Uncomment after server is online
 		
 		if(isset($result)){
 			header("Location:login.php");
@@ -78,5 +78,4 @@
 	}
 
 	
-
  ?>
