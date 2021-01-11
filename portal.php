@@ -110,19 +110,7 @@
 
     </script>
 
-    <script type="text/javascript">
-      var output = <?php echo json_encode($_SESSION['visited_q']); ?>;
-      output = output.map(String);
-
-      console.log(document.getElementById(output[2]).classList);
-
-      for (var i = 0; i < output.length; i++)
-      {
-        // document.getElementById(output[i]).classList.remove("btn-outline-secondary");
-        // document.getElementById(output[i]).classList.add("btn-success");
-      }
-      console.log(output);
-    </script>
+    
 </section>
 
 
