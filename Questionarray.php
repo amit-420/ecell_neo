@@ -69,18 +69,13 @@
         date_default_timezone_set("Asia/Kolkata");
         $marks_of_each_qn = 4;
         $_SESSION['answer_of _questions'] = array();
-<<<<<<< HEAD
 
-=======
         $_SESSION['visited_q'] = array();
->>>>>>> ec5caa0a3d2f9b826d4647683ba866c431b71d7b
+
         $allowed_schools = array("vnit","vit","iiit");
 
         $now = time();
         // echo date("d-m-y H:i:s", $now) . "<br>";
-
-
-
 
 
 
