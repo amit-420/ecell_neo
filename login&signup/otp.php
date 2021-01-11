@@ -11,9 +11,6 @@ $sub="OTPverify";
 $name="user";
 
 
-
-
-//htmlMail($email,$sub,$name,"",$_SESSION["otp"]);
 ?>
 <?php $html1 =
 '<!DOCTYPE html>

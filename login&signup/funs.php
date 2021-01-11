@@ -19,7 +19,7 @@
 		$success = "Account created! Please check your inbox to verify your email address.";
 		$sub="Confirmemail";
 		$event="Welcome ur email is confirmed";
-		//htmlMail($mem_email,$sub,$mem_name,"",$event);
+		//htmlMail($mem_email,$sub,$mem_name,"",$event); Uncomment after server is online
 		
 		if(isset($result)){
 			header("Location:login.php");
