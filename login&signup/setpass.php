@@ -1,21 +1,21 @@
 <?php
 session_start();
 include("config/db.php");
-
+include("funs.php");
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Reset PASSWORD</title>
+	<title>Set PASSWORD</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
 <div class="container">
 	
 	<div class="jumbotron">
-		<h1>RESET Password</h1>
+		<h1>SET Password</h1>
 	</div>
 
 	<div class="row">
@@ -25,7 +25,7 @@ include("config/db.php");
 			
         <form action="" method="POST">
             <div class="form-group">
-					<label>Enter New Password</label>
+					<label>Enter Password</label>
 					<input type="password" id="mem_new_pass" name="mem_new_pass" class="form-control" required>
 			</div>
             <div class="form-group">
@@ -34,7 +34,7 @@ include("config/db.php");
 			</div>
 
 			<div class="form-group">
-					<button type="login" name="changepassButton" class="btn btn-primary btn-block" >Reset Password</button>
+					<button type="login" name="changepassButton" class="btn btn-primary btn-block" >Set Password</button>
             </div>
             
 			        
@@ -50,22 +50,10 @@ include("config/db.php");
 if (isset($_POST['changepassButton'])) {
     $mem_new_pass=$_POST["mem_new_pass"];
     $mem_conf_pass=$_POST["mem_conf_pass"];
-    $email=$_SESSION['mem_otp_email'];
     if($mem_new_pass == $mem_conf_pass){
-        $select=mysqli_query($db_connect, "SELECT  mem_email,mem_pass from user_login_data where mem_email='$email'") ;
-            if(mysqli_num_rows($select)==1){
-                if(isset($_SESSION['mem_otp_email'])){
-    
-                    unset($_SESSION['mem_otp_email']);
-                
-                }else if (isset($_SESSION['mem_email'])){
-                
-                    unset($_SESSION['mem_email']);
-                
-                }
-                $select=mysqli_query($db_connect,"UPDATE user_login_data SET mem_pass=sha1('$mem_new_pass') where mem_email='$email'");
-                header("location:login.php");    
-            }
+        account_creation($db_connect);
+        header("location:login.php");    
+        
   
     
     }else{
