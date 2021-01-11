@@ -9,20 +9,23 @@
 	include("funs.php");
 	$error = '';
 	if (isset($_POST['signupButton'])) {
-		if($_POST['con_mem_pass'] == $_POST['mem_pass']){
+		//if($_POST['con_mem_pass'] == $_POST['mem_pass']){
 
-
+			
 			$_SESSION['mem_email'] = $_POST['mem_email'];
 			$email= $_SESSION['mem_email'];
+			
+			$_SESSION['userdata'] = array($_POST['mem_name'],$_POST['mem_email'],$_POST['mem_number'],$_POST['mem_clgname']);
 
 			$query_select = mysqli_query($db_connect, "SELECT * from user_login_data where mem_email = '$email' ");
 
 			$checkpoint = mysqli_num_rows($query_select);
 
 			echo $checkpoint;
-
+		
 			if ($checkpoint==0) {
-				account_creation($db_connect);
+				header("Location:otp.php");
+				//account_creation($db_connect);
 
 			}else{
 
@@ -30,9 +33,9 @@
 
 			}
 
-		}else{
-				$error = "Those passwords didn't match. Try again.";
-		}
+		// }else{
+		// 		$error = "Those passwords didn't match. Try again.";
+		// }
 	}
 
 
@@ -87,14 +90,14 @@
 					<label>Mobile Number</label>
 					<input type="numbers" name="mem_number" class="form-control" required>
 				</div>
-				<div class="form-group">
+				<!-- <div class="form-group">
 					<label>Password</label>
 					<input type="password" name="mem_pass" class="form-control" required>
 				</div>
 				<div class="form-group">
 					<label>Confirm Password</label>
 					<input type="password" name="con_mem_pass" class="form-control" required>
-				</div>
+				</div> -->
 				<div class="form-group">
 					<label for="mem_clgname">Select your College:</label>
 					<select class="dropdown-toggle" name="mem_clgname" id="mem_clgname" required>
@@ -123,81 +126,8 @@
       </div>
     </div>
   </main>
-<!-- signup design end  -->
-<!-- <div class="container">
 
-	<div class="jumbotron">
-		<h1>Create your account</h1>
-	</div>
-
-	<div class="row">
-
-		<div class="col-md-4"></div>
-		<div class="col-md-4">
-
-
-
-
-       <form action="login.php">
-	   		<button type="submit" name="loginButton" class="btn btn-primary btn-block" >Already a Member? SignIN!</button>
-
-	   </form>
-	   <br><p>OR
-	   </p>
-	   <h2>Enter your details:</h2>
-
-			<form action="signup.php" method="POST">
-
-
-				<div class="form-group">
-					<label>Full Name</label>
-					<input type="text" name="mem_name" class="form-control" required>
-				</div>
-				<div class="form-group">
-					<label>Email</label>
-					<input type="email" name="mem_email" class="form-control" required>
-				</div>
-				<div class="form-group">
-					<label>Mobile Number</label>
-					<input type="numbers" name="mem_number" class="form-control" required>
-				</div>
-				<div class="form-group">
-					<label>Password</label>
-					<input type="password" name="mem_pass" class="form-control" required>
-				</div>
-				<div class="form-group">
-					<label>Confirm Password</label>
-					<input type="password" name="con_mem_pass" class="form-control" required>
-				</div>
-				<div class="form-group">
-					<label for="mem_clgname">Select your College:</label>
-					<select name="mem_clgname" id="mem_clgname" required>
-						<option value="vnit"> VNIT, Nagpur</option>
-						<option value="iiiit"> iiiT, Nagpur</option>
-						<option value="vit"> VIT, Nagpur</option>
-					</select>
-
-				</div>
-				<div><?php echo $error; ?></div>
-
-				<div class="form-group">
-					<button type="submit" name="signupButton" class="btn btn-primary btn-block" >Sign Up!</button>
-				</div>
-
-
-
-			</form>
-
-		</div>
-		<div class="col-md-4"></div>
-
-	</div>
-
-
-
-
-</div>
-	 -->
+	<div><?php echo $error; ?></div>
 
 	 <!-- Jquery -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

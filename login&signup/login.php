@@ -3,11 +3,11 @@ include("config/db.php");
 include("funs.php");
 $error = '';
 if (isset($_POST['loginButton'])) {
+  session_start();
+  $_SESSION['mem_email'] = $_POST['mem_email'];
+  $email= $_SESSION['mem_email'];
 
-    $_SESSION['mem_email'] = $_POST['mem_email'];
-    $email= $_SESSION['mem_email'];
-
-    $query_select = mysqli_query($db_connect, "SELECT * from user_login_data where mem_email = '$email' ");
+  $query_select = mysqli_query($db_connect, "SELECT * from user_login_data where mem_email = '$email' ");
 
 	$checkpoint = mysqli_num_rows($query_select);
 
@@ -23,6 +23,7 @@ if (isset($_POST['loginButton'])) {
 
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -100,7 +101,7 @@ if (isset($_POST['loginButton'])) {
       </div>
     </div>
   </main>
-
+<?php echo $error;?>
 
 <!-- Styling of page end -->
 <!-- <div class="container">
