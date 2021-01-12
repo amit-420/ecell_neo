@@ -109,6 +109,8 @@
     var x = setInterval(function() { setTimer(); },1);
 
     </script>
+
+    
 </section>
 
 
@@ -191,7 +193,7 @@
               <label for="option3"><?php echo $option3 ?></label>
 
               <div class="col-md-6 pl-0">
-                <input type="submit" name="<?php echo $Q_no ?>" value="Save and Next Question"  class="btn btn-dark">
+                <input type="submit" name="<?php echo $Q_no ?>" value="Save and Next Question" onclick="updateCookie(<?php echo $Q_no ?>)" class="btn btn-dark">
               </div>
 
           <h5><?php echo $error_message;?></h5>
@@ -199,13 +201,13 @@
         </div>
 
         <div class="col-md-4 text-right pr-0">
-          <h6>Question palette</h6>
+          <h6 class="text-center">Question palette</h6>
           <div class="row">
 
           <form action="portal.php" method="post">
               <?php for($i=1;$i <= $total_noof_questions; $i++)
               {?>
-              <input type="submit" class="col-md-2 mb-1 ml-1" name="question_no_frompallete" value="<?php echo $i ?>"/>
+              <input type="submit" class="col-md-2 mb-1 ml-1 btn btn-outline-secondary" name="question_no_frompallete" value="<?php echo $i ?>" id="<?php echo $i ?>"/>
               <?php
               }?>
           </form>
@@ -218,7 +220,7 @@
       <div class="row justify-content-end">
         <div class="col-md-6 text-right">
           <form action="portal.php" method="POST">
-            <input type="submit" class="btn btn-primary" name="logout" value="Submit">
+            <input type="submit" onclick="return confirm('Are you sure you want to submit and end the test? You can perform this action only once!')" class="btn btn-primary" name="logout" value="Submit">
           </form>
         </div>
 
@@ -227,6 +229,28 @@
 
     </section>
 
+
+    <script type="text/javascript">
+      var visitedQuestions = <?php echo json_encode($_SESSION['visited_q']); ?>;
+      visitedQuestions = visitedQuestions.map(String);
+
+      for (var i = 0; i < visitedQuestions.length; i++)
+      {
+        document.getElementById(visitedQuestions[i]).classList.remove("btn-outline-secondary");
+        document.getElementById(visitedQuestions[i]).classList.add("btn-danger");
+      }
+
+
+      var attemptedQuestions = <?php echo json_encode($_SESSION['no_of_submited_qn']); ?>;
+
+      attemptedQuestions = attemptedQuestions.map(String);
+
+      for (var i = 0; i < attemptedQuestions.length; i++)
+      {
+        document.getElementById(attemptedQuestions[i]).classList.remove("btn-danger");
+        document.getElementById(attemptedQuestions[i]).classList.add("btn-success");
+      }
+    </script>
     </body>
 
 </html>
