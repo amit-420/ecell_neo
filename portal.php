@@ -110,7 +110,6 @@
 
     </script>
 
-    
 </section>
 
 
@@ -122,134 +121,232 @@
     </a>
 
   </nav>
+  <div class="row timer mt-2 ml-3 text-right">
+    <div class="col-7">
 
-    <section class="container grey-text pt-4">
-
-        <p class="timer">
-          <span id="demo"></span> :
-          <span id="demo1"></span> :
-          <span id="demo3"></span>
-          <span id="done"></span>
-        </p>
-
-        <?php
-            $Q_no = $_SESSION['selected_question_details'][0];
-            $question = $_SESSION['selected_question_details'][1];
-            $option1 = $_SESSION['selected_question_details'][2];
-            $option2 = $_SESSION['selected_question_details'][3];
-            $option3 = $_SESSION['selected_question_details'][4];
-            $image_url = $_SESSION['selected_question_details'][5];
-            $checked1 = "";$checked2 = "";$checked3 = "";
-            // echo "Q" . $Q_no;
-            if(isset($_SESSION['answer_of_question'][$Q_no])){
-                $previous_answer = $_SESSION['answer_of_question'][$Q_no];
-                switch($previous_answer){
-                    case "1":
-                        $checked1 = "checked";
-                    break;
-                    case "2":
-                        $checked2 = "checked";
-                    break;
-                    case "3":
-                        $checked3 = "checked";
-                    break;
-                    default:
-                        $checked1 = "";$checked2 = "";$checked3 = "";
-                    break;
-                    }
-            }
-        ?>
-
-
-    <!-- Bootstrap grid for layout of question palette and options -->
-
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-8">
-
-          <!-- Display question number and the question -->
-          <p class="question-text" style="font-size: 1.3rem;">
-            <strong><?php echo "Q. ". $Q_no . " " ?></strong><?php echo $question ?>
-            <?php
-              if($image_url != "")
-                { ?>
-                  <div class="row">
-                    <img src=<?php echo $image_url ?> alt="Stickman">
-                  </div>
-
-            <?php }else{ } ?>
-          </p>
-
-          <form class="white" action="portal.php" method="POST">
-
-              <input type="radio" id="option1" name="answer" value="1" <?php echo $checked1?>>
-              <label for="option1"><?php echo $option1?></label><br>
-
-              <input type="radio" id="option2" name="answer" value="2" <?php echo $checked2?>>
-              <label for="option2"><?php echo $option2 ?></label><br>
-
-              <input type="radio" id="option3" name="answer" value="3" <?php echo $checked3?>>
-              <label for="option3"><?php echo $option3 ?></label>
-
-              <div class="col-md-6 pl-0">
-                <input type="submit" name="<?php echo $Q_no ?>" value="Save and Next Question" onclick="updateCookie(<?php echo $Q_no ?>)" class="btn btn-dark">
-              </div>
-
-          <h5><?php echo $error_message;?></h5>
-          </form>
-        </div>
-
-        <div class="col-md-4 text-right pr-0">
-          <h6 class="text-center">Question palette</h6>
-          <div class="row">
-
-          <form action="portal.php" method="post">
-              <?php for($i=1;$i <= $total_noof_questions; $i++)
-              {?>
-              <input type="submit" class="col-md-2 mb-1 ml-1 btn btn-outline-secondary" name="question_no_frompallete" value="<?php echo $i ?>" id="<?php echo $i ?>"/>
-              <?php
-              }?>
-          </form>
-          </div>
-        </div>
-
+    </div>
+      <div class="col-md-3">
+        <span class="text-muted timer-text">Time Remaining</span>
+      </div>
+      <div class="col-md-2">
+        <span id="demo"></span> :
+        <span id="demo1"></span> :
+        <span id="demo3"></span>
+        <span id="done"></span>
       </div>
 
-
-      <div class="row justify-content-end">
-        <div class="col-md-6 text-right">
-          <form action="portal.php" method="POST">
-            <input type="submit" onclick="return confirm('Are you sure you want to submit and end the test? You can perform this action only once!')" class="btn btn-primary" name="logout" value="Submit">
-          </form>
-        </div>
-
-      </div>
+  </div>
 
 
+  <section class="container grey-text pt-4">
+
+      <?php
+          $Q_no = $_SESSION['selected_question_details'][0];
+          $question = $_SESSION['selected_question_details'][1];
+          $option1 = $_SESSION['selected_question_details'][2];
+          $option2 = $_SESSION['selected_question_details'][3];
+          $option3 = $_SESSION['selected_question_details'][4];
+          $image_url = $_SESSION['selected_question_details'][5];
+          $checked1 = "";$checked2 = "";$checked3 = "";
+          // echo "Q" . $Q_no;
+          if(isset($_SESSION['answer_of_question'][$Q_no])){
+              $previous_answer = $_SESSION['answer_of_question'][$Q_no];
+              switch($previous_answer){
+                  case "1":
+                      $checked1 = "checked";
+                  break;
+                  case "2":
+                      $checked2 = "checked";
+                  break;
+                  case "3":
+                      $checked3 = "checked";
+                  break;
+                  default:
+                      $checked1 = "";$checked2 = "";$checked3 = "";
+                  break;
+                  }
+          }
+      ?>
     </section>
+
+
+      <!-- Bootstrap grid for layout of question palette and options -->
+    <section class="desktop-only">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-8">
+
+            <!-- Display question number and the question -->
+            <p class="question-text" style="font-size: 1.3rem;">
+              <strong><?php echo "Q. ". $Q_no . " " ?></strong><?php echo $question ?>
+              <?php
+                if($image_url != "")
+                  { ?>
+                    <div class="row">
+                      <img src=<?php echo $image_url ?> alt="Stickman">
+                    </div>
+
+              <?php }else{ } ?>
+            </p>
+
+            <form class="white" action="portal.php" method="POST">
+
+                <input type="radio" id="option1" name="answer" value="1" <?php echo $checked1?>>
+                <label for="option1"><?php echo $option1?></label><br>
+
+                <input type="radio" id="option2" name="answer" value="2" <?php echo $checked2?>>
+                <label for="option2"><?php echo $option2 ?></label><br>
+
+                <input type="radio" id="option3" name="answer" value="3" <?php echo $checked3?>>
+                <label for="option3"><?php echo $option3 ?></label>
+
+                <div class="col-md-6 pl-0">
+                  <input type="submit" name="<?php echo $Q_no ?>" value="Save and Next Question" onclick="updateCookie(<?php echo $Q_no ?>)" class="btn btn-dark">
+                </div>
+
+            <h5><?php echo $error_message;?></h5>
+            </form>
+          </div>
+
+          <div class="col-md-4 text-right pr-0">
+            <h6 class="text-center">Question palette</h6>
+            <div class="row text-center">
+
+            <form action="portal.php" method="post">
+                <?php for($i=1; $i <= $total_noof_questions; $i++)
+                {?>
+                <input type="submit" class="col-md-2 mb-1 ml-1 btn btn-outline-secondary <?php echo $i ?>" name="question_no_frompallete" value="<?php echo $i ?>" />
+                <?php
+                }?>
+            </form>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="row justify-content-end">
+          <div class="col-md-6 text-right">
+            <form action="portal.php" method="POST">
+              <input type="submit" onclick="return confirm('Are you sure you want to submit and end the test? You can perform this action only once!')" class="btn btn-primary" name="logout" value="Submit">
+            </form>
+          </div>
+
+        </div>
+
+
+      </section>
+  </section>
+
+
+
+  <!-- Page for mobile view -->
+
+  <section class="mobile-only">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-12">
+
+            <!-- Display question number and the question -->
+            <p class="question-text" style="font-size: 1.3rem;">
+              <strong><?php echo "Q. ". $Q_no . " " ?></strong><?php echo $question ?>
+              <?php
+                if($image_url != "")
+                  { ?>
+                    <div class="row">
+                      <img src=<?php echo $image_url ?> alt="Stickman">
+                    </div>
+
+              <?php }else{ } ?>
+            </p>
+
+            <form class="white" action="portal.php" method="POST">
+
+                <input type="radio" id="option1" name="answer" value="1" <?php echo $checked1?>>
+                <label for="option1"><?php echo $option1?></label><br>
+
+                <input type="radio" id="option2" name="answer" value="2" <?php echo $checked2?>>
+                <label for="option2"><?php echo $option2 ?></label><br>
+
+                <input type="radio" id="option3" name="answer" value="3" <?php echo $checked3?>>
+                <label for="option3"><?php echo $option3 ?></label>
+
+                <div class="col-md-6 pl-0">
+                  <input type="submit" name="<?php echo $Q_no ?>" value="Save and Next Question" onclick="updateCookie(<?php echo $Q_no ?>)" class="btn btn-dark">
+                </div>
+
+            <h5><?php echo $error_message;?></h5>
+            </form>
+          </div>
+
+          <div class="col-md-4">
+            <h6 class="text-center">Question palette</h6>
+            <div class="row">
+
+            <form action="portal.php" method="post">
+                <?php for($i=1;$i <= $total_noof_questions; $i++)
+                {?>
+                <input type="submit" class="col-2 mb-1 ml-1 btn btn-outline-secondary <?php echo $i ?>" name="question_no_frompallete" value="<?php echo $i ?>"/>
+                <?php
+                }?>
+            </form>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="row justify-content-end">
+          <div class="col-md-6 text-right">
+            <form action="portal.php" method="POST">
+              <input type="submit" onclick="return confirm('Are you sure you want to submit and end the test? You can perform this action only once!')" class="btn btn-primary" name="logout" value="Submit">
+            </form>
+          </div>
+
+        </div>
+
+
+      </section>
+  </section>
+
+
 
 
     <script type="text/javascript">
       var visitedQuestions = <?php echo json_encode($_SESSION['visited_q']); ?>;
       visitedQuestions = visitedQuestions.map(String);
 
+
+
       for (var i = 0; i < visitedQuestions.length; i++)
       {
-        document.getElementById(visitedQuestions[i]).classList.remove("btn-outline-secondary");
-        document.getElementById(visitedQuestions[i]).classList.add("btn-danger");
+        var visitedQuestionButtons = document.getElementsByClassName(visitedQuestions[i]);
+        for (var j = 0; j < visitedQuestionButtons.length; j++)
+        {
+          visitedQuestionButtons[j].classList.remove("btn-outline-secondary");
+          visitedQuestionButtons[j].classList.add("btn-danger");
+        }
       }
 
 
       var attemptedQuestions = <?php echo json_encode($_SESSION['no_of_submited_qn']); ?>;
-
       attemptedQuestions = attemptedQuestions.map(String);
+
+
 
       for (var i = 0; i < attemptedQuestions.length; i++)
       {
-        document.getElementById(attemptedQuestions[i]).classList.remove("btn-danger");
-        document.getElementById(attemptedQuestions[i]).classList.add("btn-success");
+        var attemptedQuestionButtons = document.getElementsByClassName(attemptedQuestions[i]);
+        for (var j = 0; j < attemptedQuestionButtons.length; j++)
+        {
+          attemptedQuestionButtons[j].classList.remove("btn-danger");
+          attemptedQuestionButtons[j].classList.add("btn-success");
+        }
       }
+
     </script>
     </body>
 
