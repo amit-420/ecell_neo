@@ -102,8 +102,9 @@
 					<label for="mem_clgname">Select your College:</label>
 					<select class="dropdown-toggle" name="mem_clgname" id="mem_clgname" required>
 						<option value="vnit"> VNIT, Nagpur</option>
-						<option value="iiiit"> iiiT, Nagpur</option>
+						<option value="iiit"> iiiT, Nagpur</option>
 						<option value="vit"> VIT, Nagpur</option>
+						<option value="xyz"> xyz </option>
 					</select>
 
 				</div>
