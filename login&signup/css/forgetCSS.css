@@ -1,0 +1,10 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../images/background5-01.jpg');
+    background-size: cover;
+}
+
+body h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}

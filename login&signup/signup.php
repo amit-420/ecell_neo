@@ -29,7 +29,7 @@
 
 			}else{
 
-				$error = "Email already exists .Sign In!";
+				$error = "Email already exists. Sign In!";
 
 			}
 
@@ -85,7 +85,9 @@
 				<div class="form-group">
 					<label>Email</label>
 					<input type="email" name="mem_email" class="form-control" required>
+					<div class="text-danger"><?php echo $error; ?></div>
 				</div>
+				
 				<div class="form-group">
 					<label>Mobile Number</label>
 					<input type="numbers" name="mem_number" class="form-control" required>
@@ -107,7 +109,7 @@
 					</select>
 
 				</div>
-				<div class="text-danger"><?php echo $error; ?></div>
+				
 
 				<div class="form-group">
 					<button type="submit" name="signupButton" class="btn btn-block login-btn mb-4" >Sign Up!</button>
