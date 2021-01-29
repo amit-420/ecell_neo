@@ -64,13 +64,13 @@ function calculate_and_submit_marks($conn,$total_noof_questions,$marks_of_each_q
 
 function question_selection_frompallete($questions){
     $_PACK = $questions[$_SESSION['selected_q_no'] - 1];
-    $_SESSION['visited_q'][] = $_SESSION['selected_q_no'];
+    in_array($_SESSION['selected_q_no'],$_SESSION['visited_q']) ? null : $_SESSION['visited_q'][] = $_SESSION['selected_q_no'];
     return $_PACK;
 }
 
 function question_selection_bynextbtn($questions,$selected_question_no = 1){
     $_PACK = $questions[$selected_question_no];
-    $_SESSION['visited_q'][] = $_SESSION['selected_q_no'];
+    in_array($_SESSION['selected_q_no'],$_SESSION['visited_q']) ? null : $_SESSION['visited_q'][] = $_SESSION['selected_q_no'];
     return $_PACK;
 }
 

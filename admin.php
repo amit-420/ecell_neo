@@ -56,6 +56,15 @@ elseif(isset($_POST['change_exam_status'])){
             <input type="text" name="username" > <br> <br>
             <label>Password</label>
             <input type="password" name="password"> <br><br> <br>
+            <div class="form-group">
+					<label for="mem_clgname">Select your College:</label>
+					<select class="dropdown-toggle" name="mem_clgname" id="mem_clgname" required>
+						<option value="vnit"> VNIT, Nagpur</option>
+						<option value="iiit"> iiiT, Nagpur</option>
+						<option value="vit"> VIT, Nagpur</option>
+						<option value="xyz"> xyz </option>
+					</select>
+			</div>
             <input type="submit" name="submit" value="login">
         </form>
     </html>
@@ -99,12 +108,13 @@ elseif(isset($_POST['change_exam_status'])){
                         <th>Collage Name</th>
                         <th>Payment Status</th>
                         <th>Exam Status</th>
+                        <th>Marks</th>
                     </tr>
                 </thead>
 				<tbody>
 				
 				<?php
-				$result = mysqli_query($conn,"SELECT * FROM user_login_data ORDER BY mem_clgname ASC");
+				$result = mysqli_query($conn,"SELECT * FROM user_login_data ORDER BY mem_clgname,payment_status,exam_status ASC");
 					$i=1;
 					while($row = mysqli_fetch_array($result)) {
 				?>
@@ -123,6 +133,7 @@ elseif(isset($_POST['change_exam_status'])){
                     <input type="hidden" name="mem_email" value="<?php echo $row["mem_email"]?>">
                         <input type="submit" class="col-md-2" name="change_exam_status" value="<?php echo $row['exam_status'] ?>"/>
                         </form></td>
+                    <td><?php echo $row["marks"]; ?></td>
                 </td>
                     
 				</tr>

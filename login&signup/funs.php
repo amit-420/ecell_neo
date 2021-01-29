@@ -7,12 +7,18 @@
 		$mem_pass = sha1($mem_pass);
 		$mem_clgname = $_SESSION['userdata'][3];
 
-		
-		$query = "INSERT INTO user_login_data
+		$query3 = "CREATE TABLE IF NOT EXISTS `$mem_clgname`(
+			id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+			mem_name VARCHAR(255) NOT NULL,
+			mem_email VARCHAR(255) NOT NULL,
+			marks INT(10) NOT NULL
+			)";
+		$query2 = "INSERT INTO user_login_data
 				(`id`,`mem_name`, `mem_email`, `mem_pass`, `mem_number`, `mem_clgname`, `payment_status`, `exam_status`, `marks`) 
 				VALUES ('NULL', '$mem_name', '$mem_email', '$mem_pass', '$mem_number', '$mem_clgname', '0', '0', '0') ;";
-		$query .= "INSERT INTO `$mem_clgname` (`id`,`mem_name`, `mem_email`,`marks`) VALUES ('NULL', '$mem_name','$mem_email','0') ";
-		$result = mysqli_multi_query($db_connect,$query);
+		$query1 = "INSERT INTO `$mem_clgname` (`id`,`mem_name`, `mem_email`,`marks`) VALUES ('NULL', '$mem_name','$mem_email','0') ";
+		
+		$result1 = mysqli_multi_query($db_connect,$query1);
 
 		
 		
@@ -21,11 +27,27 @@
 		$event="Welcome ur email is confirmed";
 		//htmlMail($mem_email,$sub,$mem_name,"",$event); Uncomment after server is online
 		
-		if(isset($result)){
+		if($result1){
+			$result2 = mysqli_multi_query($db_connect,$query2);
+			if($result2){
 			header("Location:login.php");
 			echo "Data stored succesfully by updating existing data" . mysqli_error($db_connect);
+			}else{
+				echo  "Error: " . "<br>" . mysqli_error($db_connect);
+			}
 		}else{
+			$result3 = mysqli_multi_query($db_connect,$query3);
+			if($result3){
+				$result1 = mysqli_multi_query($db_connect,$query1);
+				$result2 = mysqli_multi_query($db_connect,$query2);
+				if($result2 and $result1){
+					header("Location:login.php");
+					echo "Data stored succesfully by updating existing data" . mysqli_error($db_connect);
+				}else{
+					echo  "Error: " . "<br>" . mysqli_error($db_connect);
+				}
 			echo  "Error: " . "<br>" . mysqli_error($db_connect);
+		}
 		}
 			
 	}
