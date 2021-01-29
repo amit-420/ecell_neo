@@ -5,7 +5,7 @@ include("config/confirmmail.php");
 include("funs.php");
 $random_verification_code = rand(1000,9999);
 $_SESSION["otp"]=$random_verification_code;
-echo $random_verification_code;
+#echo $random_verification_code;
  
 $sub="OTPverify";
 $name="user";
@@ -86,12 +86,12 @@ $name="user";
 
 <?php 
 if(isset($_SESSION['mem_otp_email'])){
-	//htmlMail($email,$sub,$name,"",$_SESSION["otp"]); Make active after server is online 
+	htmlMail($email,$sub,$name,"",$_SESSION["otp"]); #Make active after server is online 
 	echo $_SESSION['mem_otp_email'];
 	$email = $_SESSION['mem_otp_email'];
 	echo $html1;
 }else if (isset($_SESSION['mem_email'])){
-	//htmlMail($email,$sub,$name,"",$_SESSION["otp"]);  Make active after server is online
+	htmlMail($email,$sub,$name,"",$_SESSION["otp"]);  #Make active after server is online
 	echo $_SESSION['mem_email'];
 	$email = $_SESSION['mem_email'];
 	echo $html2;
