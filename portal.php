@@ -184,7 +184,7 @@
                 if($image_url != "")
                   { ?>
                     <div class="row">
-                      <img src=<?php echo $image_url ?> alt="Stickman">
+                      <img height="400px" width="700px" src=<?php echo $image_url ?> alt="Stickman">
                     </div>
 
               <?php }else{ } ?>
@@ -216,7 +216,7 @@
             <form action="portal.php" method="post">
                 <?php for($i=1; $i <= $total_noof_questions; $i++)
                 {?>
-                <input type="submit" class="col-md-2 mb-1 ml-1 btn btn-outline-secondary <?php echo $i ?>" name="question_no_frompallete" value="<?php echo $i ?>" />
+                <input type="submit" class="col-md-2 col-sm-2 col-xs-2 mb-1 ml-1 btn btn-outline-secondary <?php echo $i ?>" name="question_no_frompallete" value="<?php echo $i ?>" />
                 <?php
                 }?>
             </form>
@@ -257,7 +257,7 @@
                 if($image_url != "")
                   { ?>
                     <div class="row">
-                      <img src=<?php echo $image_url ?> alt="Stickman">
+                      <img height="300px" width="300px" src=<?php echo $image_url ?> alt="Stickman">
                     </div>
 
               <?php }else{ } ?>
