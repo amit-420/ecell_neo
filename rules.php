@@ -72,6 +72,40 @@ if(isset($_POST['to_portal'])){
          <form class="text-center pt-3">
            <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_FtzC22qacomokD"> </script>
          </form>
+          <form action="pay.php" method="post">
+            <table>
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                </tr>
+                <tr>
+                  <td><input type="text" name="CUSTOMER_NAME" value="Yogendra Tomar"></td>
+                </tr>
+                <tr>
+                  <th>Customer Email</th>
+                </tr>
+                <tr>
+                  <td><input type="text" name="CUSTOMER_EMAIL" value="info@myinboxhub.co.in"></td>
+                </tr>
+                <tr>
+                  <th>Customer Mobile</th>
+                </tr>
+                <tr>
+                  <td><input type="text" name="CUSTOMER_MOBILE" value="Youtube"></td>
+                </tr>
+                <tr>
+                  <th>Payment Amount in subscurrency</th>
+                </tr>
+                <tr>
+                  <td><input type="text" name="PAY_AMT" value="10000"></td>
+                </tr>
+                <tr>
+                  <td><input type="submit" value="Pay Now"></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+
         <div class="text-center">
           <img src="images/Untitled-2-02.jpg" alt="payment graphic" width="500px" />
         </div>
