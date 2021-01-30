@@ -83,6 +83,7 @@ if (isset($_POST['loginButton'])) {
             <div class="form-group mb-4">
 					<label>Password</label>
 					<input type="password" id="mem_pass" name="mem_pass" class="form-control" placeholder="***********" required>
+          <div class="text-danger"><?php echo $error; ?></div>
 			</div>
 
 			<div class="form-group">
@@ -101,7 +102,7 @@ if (isset($_POST['loginButton'])) {
       </div>
     </div>
   </main>
-<?php echo $error;?>
+
 
 <!-- Styling of page end -->
 <!-- <div class="container">
