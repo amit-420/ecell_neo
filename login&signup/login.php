@@ -5,7 +5,9 @@ $error = '';
 if (isset($_POST['loginButton'])) {
   session_start();
   $_SESSION['mem_email'] = $_POST['mem_email'];
+  $_SESSION['mem_pass'] = $_POST['mem_pass'];
   $email= $_SESSION['mem_email'];
+  $password = sha1(mysqli_real_escape_string($db_connect,$_SESSION['mem_pass']));
 
   $query_select = mysqli_query($db_connect, "SELECT * from user_login_data where mem_email = '$email' ");
 
@@ -13,10 +15,16 @@ if (isset($_POST['loginButton'])) {
 
 	echo $checkpoint;
 
-    if ($checkpoint>0) {
-
-		login_func($db_connect);
-
+    if ($checkpoint>0) { // condition for wrong passwordneeds to be added.
+      $query_select1 = mysqli_query($db_connect, "SELECT * from user_login_data where mem_email = '$email' AND mem_pass = '$password' ");
+      $checkpoint1 = mysqli_num_rows($query_select1);
+        if($checkpoint1>0){
+          login_func($db_connect);
+          
+        }else{
+            $error = "You have entered Wrong Password";
+		
+        }
     }else{
 
         $error = "Email doesn't exist, Signup!";
