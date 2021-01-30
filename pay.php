@@ -12,7 +12,7 @@ $api = new Api($keyId, $secretKey);
 $CUSTOMER_NAME = $_POST['CUSTOMER_NAME'];
 $CUSTOMER_EMAIL = $_POST['CUSTOMER_EMAIL'];
 $CUSTOMER_MOBILE = $_POST['CUSTOMER_MOBILE'];
-$PAY_AMT = $_POST['PAY_AMT'];
+$PAY_AMT = 100;
 
 
 
@@ -39,8 +39,8 @@ $order = $api->order->create(array(
         data-currency="INR"
         data-order_id="<?php echo $order->id ?>"
         data-buttontext="Pay with Razorpay"
-        data-name="Myinboxhub"
-        data-description="For Donation"
+        data-name="E-Cell VNIT, Nagpur"
+        data-description="NEO Enrollment Fees"
         data-image="<?php echo 'https://myinboxhub.co.in/data/logo/logo.png'; ?>"
         data-prefill.name="<?php echo $CUSTOMER_NAME; ?>"
         data-prefill.email="<?php echo $CUSTOMER_EMAIL; ?>"

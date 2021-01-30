@@ -68,43 +68,38 @@ if(isset($_POST['to_portal'])){
 
           </nav>
         <h4 class="text-center pt-4">Your payment is overdue.</h4>
+        
+        <!-- This is the payment button which will be added in case of automatic payment failure 
         <p class="text-center">Click the button below to pay the fee and resume with exam</p>
          <form class="text-center pt-3">
            <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_FtzC22qacomokD"> </script>
          </form>
-          <form action="pay.php" method="post">
-            <table>
-              <tbody>
-                <tr>
-                  <th>Name</th>
-                </tr>
-                <tr>
-                  <td><input type="text" name="CUSTOMER_NAME" value="Yogendra Tomar"></td>
-                </tr>
-                <tr>
-                  <th>Customer Email</th>
-                </tr>
-                <tr>
-                  <td><input type="text" name="CUSTOMER_EMAIL" value="info@myinboxhub.co.in"></td>
-                </tr>
-                <tr>
-                  <th>Customer Mobile</th>
-                </tr>
-                <tr>
-                  <td><input type="text" name="CUSTOMER_MOBILE" value="Youtube"></td>
-                </tr>
-                <tr>
-                  <th>Payment Amount in subscurrency</th>
-                </tr>
-                <tr>
-                  <td><input type="text" name="PAY_AMT" value="10000"></td>
-                </tr>
-                <tr>
-                  <td><input type="submit" value="Pay Now"></td>
-                </tr>
-              </tbody>
-            </table>
-          </form>
+        -->  
+
+        <div class="container d-flex align-items-center justify-content-center min-vh-100 pt-5 p-3 rounded">
+          <div class ="row">
+            <form action="pay.php" method="POST">
+              <div class="form-group">
+                <label for="CUSTOMER_NAME">Name</label>
+                <input placeholder="Enter Name" type="text" id="CUSTOMER_NAME" name="CUSTOMER_NAME" class="form-control rounded-pill" required>
+              </div>
+              <div class="form-group">
+                <label for="CUSTOMER_EMAIL">Registered E-mail</label>
+                <input placeholder="Enter Email" type="email" id="CUSTOMER_EMAIL" name="CUSTOMER_EMAIL" class="form-control rounded-pill" required>
+              </div>
+              <div class="form-group">
+                <label for="CUSTOMER_MOBILE">Contact Number</label>
+                <input placeholder="Enter Contact Number" type="number" id="CUSTOMER_MOBILE" name="CUSTOMER_MOBILE" class="form-control rounded-pill" required>
+              </div>
+              <div class="form-group">
+                <label for="CUSTOMER_PAYMENT">Payment Amount in Sub-Currency</label>
+              </div>
+              <div class="form-group">
+                <button type="submit" name="submit" class="btn btn-danger btn-block rounded-pill"> Submit </button>
+              </div>
+            </form>
+          </div>
+        </div>
 
         <div class="text-center">
           <img src="images/Untitled-2-02.jpg" alt="payment graphic" width="500px" />
