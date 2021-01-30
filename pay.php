@@ -26,7 +26,7 @@ $order = $api->order->create(array(
 );
 
 ?>
-
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -50,3 +50,15 @@ $order = $api->order->create(array(
 
 
 </form>
+
+<!--
+<style>
+    .razorpay-payment-button {display: none;}
+</style>
+-->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.razorpay-payment-button').click();
+    });
+</script>
