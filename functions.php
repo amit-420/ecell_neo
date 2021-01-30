@@ -5,6 +5,7 @@ function cheacking_answer($conn,$answer_key) {
     $question_no = $_SESSION['selected_q_no'];
 
     if(!isset($_SESSION['no_of_right_qn'])){ $_SESSION['no_of_right_qn'] = 0;}
+    if(!isset($_SESSION['no_of_wrong_qn'])){ $_SESSION['no_of_wrong_qn'] = 0;}
 
     if(in_array($question_no,$_SESSION['no_of_submited_qn'])){
         $previous_answer = $_SESSION['answer_of_question'][$question_no];
@@ -12,10 +13,12 @@ function cheacking_answer($conn,$answer_key) {
         if((($answer_key[$question_no - 1][1] - $previous_answer) == 0 ) and (($answer_key[$question_no - 1][1] - $answer) != 0)){
             $_SESSION['answer_of_question'][$question_no] = $answer;
             $_SESSION['no_of_right_qn'] -= 1;
+            $_SESSION['no_of_wrong_qn'] += 1;
             // echo "wrong option updated";
         }elseif((($answer_key[$question_no - 1][1] - $previous_answer) != 0) and (($answer_key[$question_no - 1][1] - $answer) == 0)){
             $_SESSION['answer_of_question'][$question_no] = $answer;
             $_SESSION['no_of_right_qn'] += 1;
+            $_SESSION['no_of_wrong_qn'] -= 1;
             // echo "right option updated";
         }else{
             // echo "same as previous option selected";
@@ -30,6 +33,7 @@ function cheacking_answer($conn,$answer_key) {
         }else{
             $_SESSION['answer_of_question'][$question_no] = $answer;
             $_SESSION['no_of_submited_qn'][] = $_SESSION['selected_q_no'];
+            $_SESSION['no_of_wrong_qn'] += 1;
         }
     }
 
@@ -43,8 +47,8 @@ function calculate_and_submit_marks($conn,$total_noof_questions,$marks_of_each_q
 
     if(!isset($_SESSION['no_of_right_qn'])){ $_SESSION['no_of_right_qn'] = 0;}
     $no_of_right_qn = mysqli_real_escape_string($conn,$_SESSION['no_of_right_qn']);
-
-    $marks = $no_of_right_qn * $marks_of_each_qn;
+    $no_of_wrong_qn = mysqli_real_escape_string($conn,$_SESSION['no_of_wrong_qn']);
+    $marks = ($no_of_right_qn * $marks_of_each_qn) - ($no_of_wrong_qn * 1);
 
     //$sql3 = "update user_login_data set marks = '$marks' where mem_email = '$mem_email' ";
     //Updating data in mysql table
