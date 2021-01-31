@@ -92,11 +92,11 @@ if(isset($_POST['to_portal'])){
                 <input placeholder="Enter Contact Number" type="number" id="CUSTOMER_MOBILE" name="CUSTOMER_MOBILE" class="form-control rounded-pill" required>
               </div>
               <div class="form-group">
-                <label for="CUSTOMER_PAYMENT">Payment Amount in Sub-Currency</label>
-                <?php echo $_SESSION['mem_email'] ?>
+                <label for="CUSTOMER_PAYMENT">To proceed further kinddly pay 100 rs.</label>
+                <!-- <?php echo $_SESSION['mem_email'] ?> -->
               </div>
               <div class="form-group">
-                <button type="submit" name="submit" class="btn btn-danger btn-block rounded-pill"> Submit </button>
+                <button type="submit" name="submit" class="btn btn-danger btn-block rounded-pill"> Pay Now </button>
               </div>
             </form>
           </div>

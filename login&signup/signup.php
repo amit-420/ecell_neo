@@ -55,7 +55,7 @@
 </head>
 <script>      
   function checkIfYes() {
-      if (document.getElementById('defect').value == 'Yes') {
+      if (document.getElementById('mem_clgname').value == 'others') {
         document.getElementById('extra').style.display = '';
         document.getElementById('auth_by').disabled = false;
         document.getElementById('desc').disabled = false;
@@ -108,10 +108,10 @@
 					<input type="numbers" name="mem_par_number" class="form-control" required>
 				</div>
 				<div class="form-group">
-					<label for="class">Select your College:</label>
+					<label for="class">Select your Class:</label>
 					<select class="dropdown-toggle" name="class" id="class" required>
 						<option value="7"> 7 th</option>
-						<option value="8"> 8th</option>
+						<option value="8"> 8 th</option>
 						<option value="9"> 9 th</option>
 						<option value="10"> 10 th </option>
 					</select>
@@ -119,14 +119,16 @@
 				</div>
 				<div class="form-group">
 					<label for="mem_clgname">Select your College:</label>
-					<select class="dropdown-toggle" name="mem_clgname" id="mem_clgname" required>
+					<select onchange='checkIfYes()' class="dropdown-toggle" name="mem_clgname" id="mem_clgname" required>
 						<option value="vnit"> VNIT, Nagpur</option>
 						<option value="iiit"> iiiT, Nagpur</option>
 						<option value="vit"> VIT, Nagpur</option>
 						<option value="xyz"> xyz </option>
+						<option value="others"> Others </option>
 					</select>
 
 				</div>
+				<!--
 				<div class="form-group">
 					<label class="control-label">Is your school not in the list ?</label>
 					<select onchange='checkIfYes()' class="select form-control" id="defect" name="defect">
@@ -134,7 +136,7 @@
 					<option id="Yes" value="Yes">Yes</option>
 					</select>
 				</div>
-
+				-->
 				<div id="extra" name="other_school_name" style="display: none">
 
 					<!-- <label class="control-label" for="desc">Description</label>

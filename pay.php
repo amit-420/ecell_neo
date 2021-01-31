@@ -24,7 +24,7 @@ $actual_cust_email = $_SESSION['mem_email'];
 
 $orderData = [
     'receipt'         => 3456,
-    'amount'          => 2000 * 100, // 2000 rupees in paise
+    'amount'          => 100 * 100, // 2000 rupees in paise
     'currency'        => 'INR',
     'payment_capture' => 1 // auto capture
 ];
