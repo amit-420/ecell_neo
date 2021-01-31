@@ -93,6 +93,7 @@ if(isset($_POST['to_portal'])){
               </div>
               <div class="form-group">
                 <label for="CUSTOMER_PAYMENT">Payment Amount in Sub-Currency</label>
+                <?php echo $_SESSION['mem_email'] ?>
               </div>
               <div class="form-group">
                 <button type="submit" name="submit" class="btn btn-danger btn-block rounded-pill"> Submit </button>

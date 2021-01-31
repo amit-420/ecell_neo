@@ -15,7 +15,7 @@
 			$_SESSION['mem_email'] = $_POST['mem_email'];
 			$email= $_SESSION['mem_email'];
 			
-			$_SESSION['userdata'] = array($_POST['mem_name'],$_POST['mem_email'],$_POST['mem_number'],$_POST['mem_clgname']);
+			$_SESSION['userdata'] = array($_POST['mem_name'],$_POST['mem_email'],$_POST['mem_number'],$_POST['mem_clgname'],$_POST['mem_par_number'],$_POST['class'],$_POST['other_school_name']);
 
 			$query_select = mysqli_query($db_connect, "SELECT * from user_login_data where mem_email = '$email' ");
 
@@ -53,6 +53,17 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<script>      
+  function checkIfYes() {
+      if (document.getElementById('defect').value == 'Yes') {
+        document.getElementById('extra').style.display = '';
+        document.getElementById('auth_by').disabled = false;
+        document.getElementById('desc').disabled = false;
+      } else {
+        document.getElementById('extra').style.display = 'none';
+  }
+}
+</script>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#">
@@ -92,14 +103,20 @@
 					<label>Mobile Number</label>
 					<input type="numbers" name="mem_number" class="form-control" required>
 				</div>
-				<!-- <div class="form-group">
-					<label>Password</label>
-					<input type="password" name="mem_pass" class="form-control" required>
+				<div class="form-group">
+					<label>Parents Number</label>
+					<input type="numbers" name="mem_par_number" class="form-control" required>
 				</div>
 				<div class="form-group">
-					<label>Confirm Password</label>
-					<input type="password" name="con_mem_pass" class="form-control" required>
-				</div> -->
+					<label for="class">Select your College:</label>
+					<select class="dropdown-toggle" name="class" id="class" required>
+						<option value="7"> 7 th</option>
+						<option value="8"> 8th</option>
+						<option value="9"> 9 th</option>
+						<option value="10"> 10 th </option>
+					</select>
+
+				</div>
 				<div class="form-group">
 					<label for="mem_clgname">Select your College:</label>
 					<select class="dropdown-toggle" name="mem_clgname" id="mem_clgname" required>
@@ -110,7 +127,26 @@
 					</select>
 
 				</div>
-				
+				<div class="form-group">
+					<label class="control-label">Is your school not in the list ?</label>
+					<select onchange='checkIfYes()' class="select form-control" id="defect" name="defect">
+					<option id="No" value="No">No</option>
+					<option id="Yes" value="Yes">Yes</option>
+					</select>
+				</div>
+
+				<div id="extra" name="other_school_name" style="display: none">
+
+					<!-- <label class="control-label" for="desc">Description</label>
+					<input class="form-control" type="text" id="desc" name="desc" required disabled> -->
+					<label>school name</label>
+					<input type="numbers" name="other_school_name" class="form-control" placeholder="If your school is not in the above list" default="null">
+
+				</div>
+				<!-- <div class="form-group">
+					<label>school name</label>
+					<input type="numbers" name="other_school_name" class="form-control" placeholder="If your school is not in the above list" default="null">
+				</div> -->
 
 				<div class="form-group">
 					<button type="submit" name="signupButton" class="btn btn-block login-btn mb-4" >Sign Up!</button>

@@ -17,7 +17,10 @@ $api = new Api($keyId, $keySecret);
 
 $customer_name = $_POST['CUSTOMER_NAME'];
 $customer_email = $_POST['CUSTOMER_EMAIL'];
+
 $customer_mobile = $_POST['CUSTOMER_MOBILE'];
+
+$actual_cust_email = $_SESSION['mem_email'];
 
 $orderData = [
     'receipt'         => 3456,

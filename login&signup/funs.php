@@ -6,6 +6,9 @@
 		$mem_number = $_SESSION['userdata'][2];
 		$mem_pass = sha1($mem_pass);
 		$mem_clgname = $_SESSION['userdata'][3];
+		$parents_no = $_SESSION['userdata'][4];
+		$class = $_SESSION['userdata'][5];
+		$other_school_name = $_SESSION['userdata'][6];
 
 		$query3 = "CREATE TABLE IF NOT EXISTS `$mem_clgname`(
 			id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -14,8 +17,8 @@
 			marks INT(10) NOT NULL
 			)";
 		$query2 = "INSERT INTO user_login_data
-				(`id`,`mem_name`, `mem_email`, `mem_pass`, `mem_number`, `mem_clgname`, `payment_status`, `exam_status`, `marks`) 
-				VALUES ('NULL', '$mem_name', '$mem_email', '$mem_pass', '$mem_number', '$mem_clgname', '0', '0', '0') ;";
+				(`id`,`mem_name`, `mem_email`, `mem_pass`, `mem_number`, `mem_clgname`, `payment_status`, `exam_status`, `marks`,`class`,`parents_no`,`optional_school_name`) 
+				VALUES ('NULL', '$mem_name', '$mem_email', '$mem_pass', '$mem_number', '$mem_clgname', '0', '0', '0','$class','$parents_no','$other_school_name') ;";
 		$query1 = "INSERT INTO `$mem_clgname` (`id`,`mem_name`, `mem_email`,`marks`) VALUES ('NULL', '$mem_name','$mem_email','0') ";
 		
 		$result1 = mysqli_multi_query($db_connect,$query1);

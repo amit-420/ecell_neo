@@ -1,7 +1,7 @@
 <?php
 
 require('config.php');
-
+require('config/db_connect.php');
 session_start();
 
 //Add db connections here
@@ -15,6 +15,7 @@ $success = true;
 
 $error = "Payment Failed";
 
+$actual_cust_email = $_SESSION['mem_email'];
 if (empty($_POST['razorpay_payment_id']) === false)
 {
     $api = new Api($keyId, $keySecret);
@@ -45,11 +46,25 @@ if ($success === true)
     $razorpay_payment_id = $_POST['razorpay_payment_id'];
     $razorpay_signature = $_POST['razorpay_signature'];
 
-    $html = "<p>Your payment was successful</p>
+
+    $sql3 = "UPDATE `user_login_data` SET `order_id` = '$razorpay_order_id', `razor_payment_id`= '$razorpay_payment_id',`payment_status` = '1' WHERE `user_login_data`.`mem_email` = '$actual_cust_email';";
+    $result = mysqli_multi_query($conn,$sql3);
+    if($result){
+        $html = "<p>Your payment was successful</p>
             <p>$razorpay_order_id</p>
             <p>$razorpay_payment_id</p>
             <p>$razorpay_signature</p>
-             <p>Payment ID: {$_POST['razorpay_payment_id']}</p>";
+             <p>Payment ID: {$_POST['razorpay_payment_id']}</p>
+             <p>$actual_cust_email</p>";
+        header("Location: success.php");
+        session_unset();
+        session_destroy();
+
+    }else{
+        $html = '<p> <?php echo  "Error: " . $sql3 . "<br>" . mysqli_error($conn);?> </p>';
+        echo  "Error: " . $sql3 . "<br>" . mysqli_error($conn);
+    }
+    
 }
 else
 {

@@ -5,7 +5,7 @@ include("config/confirmmail.php");
 include("funs.php");
 $random_verification_code = rand(1000,9999);
 $_SESSION["otp"]=$random_verification_code;
-#echo $random_verification_code;
+echo $random_verification_code;
  
 $sub="OTPverify";
 $name="user";
