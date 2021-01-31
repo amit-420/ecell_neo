@@ -16,7 +16,7 @@ class Api
      */
     public static $appsDetails = array();
 
-    const VERSION = '2.5.0';
+    const VERSION = '1.2.9';
 
     /**
      * @param string $key
@@ -30,6 +30,7 @@ class Api
 
     /*
      *  Set Headers
+     *
      */
     public function setHeader($header, $value)
     {
