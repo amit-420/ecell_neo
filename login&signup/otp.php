@@ -9,6 +9,7 @@ $_SESSION["otp"]=$random_verification_code;
  
 $sub="OTPverify";
 $name="user";
+$error="";
 
 if(isset($_SESSION['mem_otp_email'])){ //forget password
 	$email = $_SESSION['mem_otp_email'];
@@ -20,6 +21,10 @@ if(isset($_SESSION['mem_otp_email'])){ //forget password
 	$title="Recover Password";
 	$button_name = "otpverifyButton1";
 	$page_title = "Recover Password";
+	if(isset($_SESSION['wrongotp1'])){
+		$error = "you entered wrong otp. new otp has been sent again";
+		unset($_SESSION['wrongotp1']);
+	}
 
 }else if (isset($_SESSION['mem_email'])){  // Set password
 	$email = $_SESSION['mem_email'];
@@ -31,6 +36,10 @@ if(isset($_SESSION['mem_otp_email'])){ //forget password
 	$title="Set Password";
 	$button_name = "otpverifyButton2";
 	$page_title = "Set Password";
+	if(isset($_SESSION['wrongotp2'])){
+		$error = "you entered wrong otp. new otp has been sent again";
+		unset($_SESSION['wrongotp2']);
+	}
 }
 
 ?>
@@ -63,6 +72,7 @@ if(isset($_SESSION['mem_otp_email'])){ //forget password
 			<div class="form-group">
 				<label style="color:white;">Enter OTP:</label>
 				<input placeholder="Enter OTP" type="integer" id="otp" name="mem_otp" class="form-control rounded-pill" required>
+				<div class="text-danger"><?php echo $error; ?></div>
 			</div>
 			<div class="form-group">
 				<button type="Submit" name="<?php echo $button_name; ?>" class="btn btn-danger btn-block rounded-pill" >Verify</button>
