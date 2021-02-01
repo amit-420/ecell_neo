@@ -1,4 +1,6 @@
 <?php 
+
+
 	function account_creation($db_connect,$mem_pass){
 	
 		$mem_name = $_SESSION['userdata'][0];
@@ -9,17 +11,24 @@
 		$parents_no = $_SESSION['userdata'][4];
 		$class = $_SESSION['userdata'][5];
 		$other_school_name = $_SESSION['userdata'][6];
+		$mem_dob = $_SESSION['userdata'][7];
+		$mem_address = $_SESSION['userdata'][8];
 
 		$query3 = "CREATE TABLE IF NOT EXISTS `$mem_clgname`(
 			id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 			mem_name VARCHAR(255) NOT NULL,
 			mem_email VARCHAR(255) NOT NULL,
+			mem_number VARCHAR(20) NOT NULL,
+			mem_class VARCHAR(10) NOT NULL,
+			parents_no VARCHAR(15) NOT NULL,
+			mem_dob DATE,
+			mem_address VARCHAR(255) NOT NULL,
 			marks INT(10) NOT NULL
 			)";
 		$query2 = "INSERT INTO user_login_data
-				(`id`,`mem_name`, `mem_email`, `mem_pass`, `mem_number`, `mem_clgname`, `payment_status`, `exam_status`, `marks`,`class`,`parents_no`,`optional_school_name`) 
-				VALUES ('NULL', '$mem_name', '$mem_email', '$mem_pass', '$mem_number', '$mem_clgname', '0', '0', '0','$class','$parents_no','$other_school_name') ;";
-		$query1 = "INSERT INTO `$mem_clgname` (`id`,`mem_name`, `mem_email`,`marks`) VALUES ('NULL', '$mem_name','$mem_email','0') ";
+				(`id`,`mem_name`, `mem_email`, `mem_pass`, `mem_number`, `mem_clgname`, `payment_status`, `exam_status`, `marks`,`class`,`parents_no`,`optional_school_name`,`mem_dob`,`mem_address`) 
+				VALUES ('NULL', '$mem_name', '$mem_email', '$mem_pass', '$mem_number', '$mem_clgname', '0', '0', '0','$class','$parents_no','$other_school_name','$mem_dob','$mem_address') ;";
+		$query1 = "INSERT INTO `$mem_clgname` (`id`,`mem_name`, `mem_email`,`mem_number`,`mem_class`,`parents_no`,`mem_dob`,`mem_address`,`marks`) VALUES ('NULL', '$mem_name','$mem_email','$mem_number','$class','$parents_no','$mem_dob','$mem_address','0') ";
 		
 		$result1 = mysqli_multi_query($db_connect,$query1);
 
@@ -28,7 +37,7 @@
 		$success = "Account created! Please check your inbox to verify your email address.";
 		$sub="Confirmemail";
 		$event="Welcome ur email is confirmed";
-		//htmlMail($mem_email,$sub,$mem_name,"",$event); Uncomment after server is online
+		//htmlMail($mem_email,$sub,$mem_name,"",$event); //Uncomment after server is online
 		
 		if($result1){
 			$result2 = mysqli_multi_query($db_connect,$query2);

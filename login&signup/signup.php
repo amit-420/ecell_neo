@@ -15,7 +15,7 @@
 			$_SESSION['mem_email'] = $_POST['mem_email'];
 			$email= $_SESSION['mem_email'];
 			
-			$_SESSION['userdata'] = array($_POST['mem_name'],$_POST['mem_email'],$_POST['mem_number'],$_POST['mem_clgname'],$_POST['mem_par_number'],$_POST['class'],$_POST['other_school_name']);
+			$_SESSION['userdata'] = array($_POST['mem_name'],$_POST['mem_email'],$_POST['mem_number'],$_POST['mem_clgname'],$_POST['mem_par_number'],$_POST['class'],$_POST['other_school_name'],$_POST['mem_dob'],$_POST['mem_address']);
 
 			$query_select = mysqli_query($db_connect, "SELECT * from user_login_data where mem_email = '$email' ");
 
@@ -98,6 +98,10 @@
 					<input type="email" name="mem_email" class="form-control" required>
 					<div class="text-danger"><?php echo $error; ?></div>
 				</div>
+				<div class="form-group">
+					<label>Date of Birth</label>
+					<input type="date" name="mem_dob" class="form-control" required>
+				</div>
 				
 				<div class="form-group">
 					<label>Mobile Number</label>
@@ -106,6 +110,10 @@
 				<div class="form-group">
 					<label>Parents Number</label>
 					<input type="numbers" name="mem_par_number" class="form-control" required>
+				</div>
+				<div class="form-group">
+					<label>Address</label>
+					<input type="text" name="mem_address" class="form-control" required>
 				</div>
 				<div class="form-group">
 					<label for="class">Select your Class:</label>

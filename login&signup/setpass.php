@@ -2,6 +2,23 @@
 session_start();
 include("config/db.php");
 include("funs.php");
+
+$error="";
+if (isset($_POST['changepassButton'])) {
+    $mem_new_pass=$_POST["mem_new_pass"];
+    $mem_conf_pass=$_POST["mem_conf_pass"];
+    if($mem_new_pass == $mem_conf_pass){
+		$mem_pass = $mem_conf_pass;
+        account_creation($db_connect,$mem_pass);
+        // header("location:login.php");    
+        
+  
+    
+    }else{
+        $error = "Passwords did not match";
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +48,7 @@ include("funs.php");
             <div class="form-group">
 					<label>Confirm Password</label>
 					<input type="password" id="mem_conf_pass" name="mem_conf_pass" class="form-control" required>
+					<div class="text-danger"><?php echo $error; ?></div>
 			</div>
 
 			<div class="form-group">
@@ -44,25 +62,7 @@ include("funs.php");
         </form>
     </div>  
 </div>
-<?php
 
-
-if (isset($_POST['changepassButton'])) {
-    $mem_new_pass=$_POST["mem_new_pass"];
-    $mem_conf_pass=$_POST["mem_conf_pass"];
-    if($mem_new_pass == $mem_conf_pass){
-		$mem_pass = $mem_conf_pass;
-        account_creation($db_connect,$mem_pass);
-        // header("location:login.php");    
-        
-  
-    
-    }else{
-        echo "Passwords did not match";
-    }
-}
-
-?>
 </body>
 </html>
 
