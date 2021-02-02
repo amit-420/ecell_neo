@@ -52,6 +52,9 @@
 	<!-- font styles  -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
 <script>      
   function checkIfYes() {
@@ -63,7 +66,15 @@
         document.getElementById('extra').style.display = 'none';
   }
 }
+
+$(function() {
+		$( "#datepicker-12" ).datepicker();
+		$( "#datepicker-12" ).datepicker("setDate", "10w+1");
+		$( "#datepicker-12" ).datepicker("show");
+		});
 </script>
+				
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="#">
@@ -99,10 +110,9 @@
 					<div class="text-danger"><?php echo $error; ?></div>
 				</div>
 				<div class="form-group">
-					<label>Date of Birth</label>
-					<input type="date" name="mem_dob" class="form-control" required>
+					<label>Date of Birth</label><br>
+					<input type = "date" name="mem_dob" id = "datepicker-12" required>
 				</div>
-				
 				<div class="form-group">
 					<label>Mobile Number</label>
 					<input type="numbers" name="mem_number" class="form-control" required>
