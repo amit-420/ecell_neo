@@ -76,7 +76,7 @@ if (isset($_POST['forgotpassButton'])) {
                                 
     $_SESSION['mem_otp_email'] = $_POST['mem_otp_email'];
     $email= $_SESSION['mem_otp_email'];
-
+    
     $query_select = mysqli_query($db_connect, "SELECT * from `$tablename` where mem_email = '$email' ");
 
     $checkpoint = mysqli_num_rows($query_select);

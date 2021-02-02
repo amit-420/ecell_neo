@@ -116,7 +116,7 @@ elseif(isset($_POST['change_exam_status'])){
 				<?php
 				$result = mysqli_query($conn,"SELECT * FROM user_login_data ORDER BY mem_clgname,payment_status,exam_status ASC");
 					$i=1;
-					while($row = mysqli_fetch_array($result)) {
+					while($row = mysqli_fetch_array($result)){
 				?>
 				<tr id="<?php echo $row["id"]; ?>">
 				

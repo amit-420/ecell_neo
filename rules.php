@@ -92,7 +92,7 @@ if(isset($_POST['to_portal'])){
                 <input placeholder="Enter Contact Number" type="number" id="CUSTOMER_MOBILE" name="CUSTOMER_MOBILE" class="form-control rounded-pill" required>
               </div>
               <div class="form-group">
-                <label for="CUSTOMER_PAYMENT">To proceed further kinddly pay 100 rs.</label>
+                <label for="CUSTOMER_PAYMENT">To proceed further kindly pay Rs.100 </label>
                 <!-- <?php echo $_SESSION['mem_email'] ?> -->
               </div>
               <div class="form-group">
