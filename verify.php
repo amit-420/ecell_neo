@@ -2,6 +2,7 @@
 
 require('config.php');
 require('config/db_connect.php');
+include('login&signup/config/confirmmail.php');
 session_start();
 
 //Add db connections here
@@ -57,6 +58,10 @@ if ($success === true)
              <p>Payment ID: {$_POST['razorpay_payment_id']}</p>
              <p>$actual_cust_email</p>";
         header("Location: success.php");
+        $sub = "Payment Successfull";
+        $name = "NEO participant";
+        $event = "Your payment is succesfull";
+        htmlMail($actual_cust_email,$sub,$name,"",$event);
         session_unset();
         session_destroy();
 

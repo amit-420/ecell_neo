@@ -8,12 +8,13 @@ $_SESSION["otp"]=$random_verification_code;
 //echo $random_verification_code;
  
 $sub="OTPverify";
-$name="user";
+$name="Dear Participant";
 $error="";
+$event = "Your OTP:". $_SESSION['otp'] ;
 
 if(isset($_SESSION['mem_otp_email'])){ //forget password
 	$email = $_SESSION['mem_otp_email'];
-	htmlMail($email,$sub,$name,"",$_SESSION["otp"]); #Make active after server is online 
+	htmlMail($email,$sub,$name,"",$event); #Make active after server is online 
 	//echo $_SESSION['mem_otp_email'];
 	$email = $_SESSION['mem_otp_email'];
 	//echo $html1;
@@ -28,7 +29,7 @@ if(isset($_SESSION['mem_otp_email'])){ //forget password
 
 }else if (isset($_SESSION['mem_email'])){  // Set password
 	$email = $_SESSION['mem_email'];
-	htmlMail($email,$sub,$name,"",$_SESSION["otp"]);  #Make active after server is online
+	htmlMail($email,$sub,$name,"",$event);  #Make active after server is online
 	//echo $_SESSION['mem_email'];
 	$email = $_SESSION['mem_email'];
 	//echo $html2;

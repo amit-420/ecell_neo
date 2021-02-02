@@ -73,7 +73,7 @@ function htmlMail($t, $sub, $name, $teamname, $event){
 
 
                           <h2><b>Greetings ".$name."!</b></h2>
-                          <p>OTP:-".$event."</p>
+                          <p>$event</p>
 
 
                           <p>Thank you for  showing interest in our <b>NEO Program</b> through which we aim to extend our entrepreneurial network across the country.</p>
