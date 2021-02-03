@@ -111,6 +111,8 @@ elseif(isset($_POST['change_exam_status'])){
                         <th>Payment Status</th>
                         <th>Exam Status</th>
                         <th>Marks</th>
+                        <th>Class</th>
+                        <th>Razor payment id</th>
                     </tr>
                 </thead>
 				<tbody>
@@ -141,6 +143,8 @@ elseif(isset($_POST['change_exam_status'])){
                         <!-- </form> -->
                     </td>
                     <td><?php echo $row["marks"]; ?></td>
+                    <td><?php echo $row["class"]; ?></td>
+                    <td><?php echo $row["razor_payment_id"]; ?></td>
                 </td>
                     
 				</tr>
