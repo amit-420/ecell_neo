@@ -1,6 +1,6 @@
 
 
-<!-- DEEPAK please remove the image from this page as well as the login page -->
+
 
 <?php
     session_start();
@@ -59,9 +59,14 @@
       <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
       <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	  <style>
-	  	a{
-			  color: red;
-		  }
+	  	.dropbtn {
+		background-color: white;
+		color: black;;
+		padding: 5px;
+		font-size: 14px;
+		border-radius: 5px;
+		/* cursor: pointer; */
+		}
 	  </style>
 </head>
 <script>      
@@ -134,8 +139,9 @@ $(function() {
 					<input type="text" name="mem_address" class="form-control" required>
 				</div>
 				<div class="form-group">
-					<label for="class">Select your Class:</label>
-					<select class="btn btn-sm dropdown-toggle" style="background-color: #333333; color:white;" type="button" data-toggle="dropdown" name="class" id="class" required>
+					<label for="class"></label>
+					<select class="dropbtn" type="button" data-toggle="dropdown" name="class" id="class" required>
+						<option value="">Select your Class</option>
 						<option value="7"> 7 th</option>
 						<option value="8"> 8 th</option>
 						<option value="9"> 9 th</option>
@@ -144,8 +150,8 @@ $(function() {
 
 				</div>
 				<div class="form-group dropdown">
-					<label for="mem_clgname">Select your School:</label>
-					<select onchange='checkIfYes()' class="btn btn-sm dropdown-toggle" style="background-color: #333333; color:white;" type="button" data-toggle="dropdown" name="mem_clgname" id="mem_clgname" required>
+					<label for="mem_clgname"></label>
+					<select onchange='checkIfYes()' class="dropbtn" type="button" data-toggle="dropdown" name="mem_clgname" id="mem_clgname" required>
 						<option value="adarsh_sanskar_vidya_nagpur"> Adarsh Sanskar Vidyalaya, Nagpur</option>
 						<option value="adarsh_vidya_mandir_nagpur"> Adarsh Vidya Mandir, Nagpur </option>
 						<option value="allen_nagpur"> Allen, Nagpur</option>
@@ -156,9 +162,8 @@ $(function() {
 						<option value="ryan_international_kandivali"> Ryan International, Kandivali </option>
 						<option value="sos_beltarodi_nagur"> SOS (Beltarodi), Nagpur </option>
 						<option value="wardha_wardha"> Wardha School, Wardha </option>
-						<option value="others"> OTHERS </option>
+                        <option value="others"> OTHERS </option>
 					</select>
-
 				</div>
 				<!--
 				<div class="form-group">
