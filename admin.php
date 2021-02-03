@@ -60,11 +60,17 @@ elseif(isset($_POST['change_exam_status'])){
             <div class="form-group">
 					<label for="mem_clgname">Select your College:</label>
 					<select class="dropdown-toggle" name="mem_clgname" id="mem_clgname" required>
-						<option value="vnit"> VNIT Nagpur</option>
-						<option value="iiit"> iiiT Nagpur</option>
-						<option value="vit"> VIT Nagpur</option>
-						<option value="xyz"> xyz </option>
-                        <option value="others">others</option>
+						<option value="adarsh_sanskar_vidya_nagpur"> Adarsh Sanskar Vidyalaya, Nagpur</option>
+						<option value="adarsh_vidya_mandir_nagpur"> Adarsh Vidya Mandir, Nagpur </option>
+						<option value="allen_nagpur"> Allen, Nagpur</option>
+						<option value="dps_lava"> D.P.S, lava </option>
+						<option value="jawahar_navodaya_gondia"> Jawahar Navodaya, Gondia </option>
+						<option value="jnv_ahmednagar"> JNV, Ahmednagar </option>
+						<option value="mordern_school_koradi"> Mordern School, Koradi Road </option>
+						<option value="ryan_international_kandivali"> Ryan International, Kandivali </option>
+						<option value="sos_beltarodi_nagur"> SOS (Beltarodi), Nagpur </option>
+						<option value="wardha_wardha"> Wardha School, Wardha </option>
+                        <option value="others"> OTHERS </option>
 					</select>
 			</div>
             <input type="submit" name="submit" value="login">

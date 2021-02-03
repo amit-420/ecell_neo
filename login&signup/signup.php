@@ -144,13 +144,19 @@ $(function() {
 
 				</div>
 				<div class="form-group dropdown">
-					<label for="mem_clgname">Select your College:</label>
+					<label for="mem_clgname">Select your School:</label>
 					<select onchange='checkIfYes()' class="btn btn-sm dropdown-toggle" style="background-color: #333333; color:white;" type="button" data-toggle="dropdown" name="mem_clgname" id="mem_clgname" required>
-						<option value="vnit"> VNIT, Nagpur</option>
-						<option value="iiit"> iiiT, Nagpur</option>
-						<option value="vit"> VIT, Nagpur</option>
-						<option value="xyz"> xyz </option>
-						<option value="others"> Others </option>
+						<option value="adarsh_sanskar_vidya_nagpur"> Adarsh Sanskar Vidyalaya, Nagpur</option>
+						<option value="adarsh_vidya_mandir_nagpur"> Adarsh Vidya Mandir, Nagpur </option>
+						<option value="allen_nagpur"> Allen, Nagpur</option>
+						<option value="dps_lava"> D.P.S, lava </option>
+						<option value="jawahar_navodaya_gondia"> Jawahar Navodaya, Gondia </option>
+						<option value="jnv_ahmednagar"> JNV, Ahmednagar </option>
+						<option value="mordern_school_koradi"> Mordern School, Koradi Road </option>
+						<option value="ryan_international_kandivali"> Ryan International, Kandivali </option>
+						<option value="sos_beltarodi_nagur"> SOS (Beltarodi), Nagpur </option>
+						<option value="wardha_wardha"> Wardha School, Wardha </option>
+						<option value="others"> OTHERS </option>
 					</select>
 
 				</div>
@@ -167,7 +173,7 @@ $(function() {
 
 					<!-- <label class="control-label" for="desc">Description</label>
 					<input class="form-control" type="text" id="desc" name="desc" required disabled> -->
-					<label>school name</label>
+					<label>School Name</label>
 					<input type="numbers" name="other_school_name" class="form-control" placeholder="If your school is not in the above list" default="null">
 
 				</div>
