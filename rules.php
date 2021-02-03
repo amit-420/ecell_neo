@@ -75,14 +75,9 @@ if(isset($_POST['to_portal'])){
             </a>
 
           </nav>
-        <h4 style="color:white;" class="text-center pt-4">Your payment is overdue.</h4>
+        <h4 style="color:white;" class="text-center pt-4">Complete Your Payment to proceed further.</h4>
         
-        <!-- This is the payment button which will be added in case of automatic payment failure 
-        <p class="text-center">Click the button below to pay the fee and resume with exam</p>
-         <form class="text-center pt-3">
-           <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_FtzC22qacomokD"> </script>
-         </form>
-        -->  
+      
 
         <div class="container d-flex align-items-center justify-content-center min-vh-100 p-3 pt-2 rounded">
           <div class ="row">
