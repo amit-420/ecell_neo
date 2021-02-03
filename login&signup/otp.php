@@ -5,7 +5,6 @@ include("config/confirmmail.php");
 include("funs.php");
 $random_verification_code = rand(1000,9999);
 $_SESSION["otp"]=$random_verification_code;
-//echo $random_verification_code;
  
 $sub="OTPverify";
 $name="Dear Participant";
@@ -58,7 +57,9 @@ if(isset($_SESSION['mem_otp_email'])){ //forget password
 	<link rel="stylesheet" href="css/forgetCSS.css">
     <!-- Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+	<!-- favicon  -->
+    <link rel="shortcut icon" href="../public/img/2.png" type="image/x-icon">
 </head>
 <body>
 <div class="container d-flex align-items-center justify-content-center min-vh-100 pt-5 p-3 rounded">

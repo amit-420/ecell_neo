@@ -45,16 +45,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Signup</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap CSS  -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- eXTERNAL css  -->
 	<link rel="stylesheet" href="assets/css/login.css">
+	<!-- favicon  -->
+    <link rel="shortcut icon" href="../public/img/2.png" type="image/x-icon">
 	<!-- font styles  -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
       <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
       <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	  <style>
+	  	a{
+			  color: red;
+		  }
+	  </style>
 </head>
 <script>      
   function checkIfYes() {
@@ -77,7 +85,7 @@ $(function() {
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="https://neo.ecellvnit.org/">
       <img src="../images/log.png" alt="NEO logo" style="height: 70px;"/>
     </a>
 
@@ -127,7 +135,7 @@ $(function() {
 				</div>
 				<div class="form-group">
 					<label for="class">Select your Class:</label>
-					<select class="dropdown-toggle" name="class" id="class" required>
+					<select class="btn btn-sm dropdown-toggle" style="background-color: #333333; color:white;" type="button" data-toggle="dropdown" name="class" id="class" required>
 						<option value="7"> 7 th</option>
 						<option value="8"> 8 th</option>
 						<option value="9"> 9 th</option>
@@ -135,9 +143,9 @@ $(function() {
 					</select>
 
 				</div>
-				<div class="form-group">
+				<div class="form-group dropdown">
 					<label for="mem_clgname">Select your College:</label>
-					<select onchange='checkIfYes()' class="dropdown-toggle" name="mem_clgname" id="mem_clgname" required>
+					<select onchange='checkIfYes()' class="btn btn-sm dropdown-toggle" style="background-color: #333333; color:white;" type="button" data-toggle="dropdown" name="mem_clgname" id="mem_clgname" required>
 						<option value="vnit"> VNIT, Nagpur</option>
 						<option value="iiit"> iiiT, Nagpur</option>
 						<option value="vit"> VIT, Nagpur</option>
@@ -175,7 +183,7 @@ $(function() {
 
 
 			</form>
-                <p class="login-card-footer-text">Already have an account? <a href="login.php" name="loginButton" class="text-reset">Sign into your account</a></p>
+                <p class="login-card-footer-text">Already have an account? <a href="login.php" name="loginButton" class="text-reset"><b>Sign into your account</b></a></p>
                 <nav class="login-card-footer-nav">
 				Copyright: <a href="ecellvnit.org">E-Cell VNIT </a>
                 </nav>

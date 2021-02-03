@@ -23,7 +23,7 @@
                         <div class="s-header-v2__navbar-col s-header-v2__navbar-col-width--180">
                             <!-- Logo -->
                             <div class="s-header-v2__logo">
-                                <a href="/" class="s-header-v2__logo-link">
+                                <a href="https://www.ecellvnit.org/" class="s-header-v2__logo-link">
                                     <img class="s-header-v2__logo-img s-header-v2__logo-img--default"  src="public/img/ecell-black-logo.png" alt="Ecell Logo" height="50">
                                     <img class="s-header-v2__logo-img s-header-v2__logo-img--shrink" src="public/img/logo-ecell-sm.png" alt="StartUp Conclave" height="60">
                                 </a>
@@ -110,20 +110,21 @@
                 <div class="col-sm-5 col-sm-pull-1 g-text-left--xs g-hor-centered-row__col">
                     <!--<p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">About</p>-->
                     <!--<h2 class="g-font-size-32--xs g-font-size-36--sm g-margin-b-25--xs">About PNAF</h2>-->
-                    <p class="g-font-size-18--sm">National Entrepreneurship Olympiad (NEO) is one of the national exam which is first of its kind. The
-                        aim of NEO is to introduce basic entrepreneurial
-                        terms like marketing, banking, investing, mutual
-                        funds, stock market, functions of RBI, etc to
-                        school students. This exam will be focusing on
-                        development of logical analytics, english proficiency, economics, case study, etc. and will help
-                        students to know Entrpreneurship better and will
-                        give exposure to new world of entreprenurship.</p>
+                    <p class="g-font-size-18--sm">National Entrepreneurship Olympiad (NEO) is a nation-wide examination for
+students (7th to 10th std) to test their entrepreneurial skills. The aim of NEO is to
+introduce basic entrepreneurial concepts of business world/startup culture like
+elevator pitch, value proposition, business model canvas, etc. among students. This
+will further enhance the students’ logical analytics, English proficiency and
+knowledge of economics. As they say, young minds are less biased and have higher
+risk taking capability; let us nurture them in right direction.</p>
                 </div>
             </div>
             <div class="row g-hor-centered-row--md g-row-col--5">
                 <div class="col-sm-3 col-xs-6 col-sm-push-6 g-hor-centered-row__col">
                     <div class="wow fadeInRight" data-wow-duration=".3" data-wow-delay=".2s">
-                        <img class="img-responsive g-padding-x-0--xs" src="public/img/conso20-black.png" alt="StartUp Conclave">
+                        <a href="https://consortium.ecellvnit.org/">
+                        <img class="img-responsive g-padding-x-0--xs" src="public/img/conso'21 final final-01.png" alt="StartUp Conclave">
+                        </a>
                     </div>
                 </div>
                 <div class="col-sm-1"></div>
@@ -148,18 +149,18 @@
                 </div>
                 <ul class="list-inline row g-margin-b-40--xs">
                     <!-- Process -->
-                    <li class="col-sm-6 col-xs-6 g-full-width--xs s-process-v1 g-margin-b-60--xs g-margin-b-0--md">
+                    <li class="col-sm-4 col-xs-4 g-full-width--xs s-process-v1 g-margin-b-60--xs g-margin-b-0--md">
                         <div class="center-block g-text-center--xs">
                             <div class="g-margin-b-30--xs">
                                 <span class="g-display-inline-block--xs g-width-100--xs g-height-100--xs g-font-size-38--xs g-bg-color--white g-box-shadow__dark-lightest-v4 g-padding-x-20--xs g-padding-y-20--xs g-radius--circle" style="color: #0079bf">01</span>
                             </div>
                             <div class="g-padding-x-20--xs">
                                 <h3 class="g-font-size-18--xs g-color--white">Round 01</h3>
-                                <p class="g-color--white">An objective based (MCQ) for which
-                                                          study material will be provided.
-                                                          Students can appear through
-                                                          school or can also register online
-                                                          for giving online exam. The registration charges will be Rs 100/-</p>
+                                <p class="g-color--white">This round comprises of at test, which will be 
+                                                        of MCQs type. Students will give this test on our website 
+                                                        after signing up on the same. The shortlisted participants
+                                                        will move onto the second round. Study material will be provided to the students.
+                                                        Registration charges are INR 100.</p>
                                 <!--<p class="text-uppercase g-font-size-14--xs g-color--white g-font-weight--400 g-letter-spacing--1 g-margin-b-25--xs">5 Dec 18 - 16 Jan 19</p>-->
                                 <!--<a id="r1"><button class="text-uppercase s-btn s-btn--md s-btn--white-bg g-radius--50 g-padding-x-20--xs g-margin-r-10--xs g-margin-l-10--xs g-margin-b-10--xs">View Schedule</button></a>-->
                             </div>
@@ -168,20 +169,18 @@
                     <!-- End Process -->
 
                     <!-- Process -->
-                    <li class="col-sm-6 col-xs-6 g-full-width--xs s-process-v1 g-margin-b-60--xs g-margin-b-0--md">
+                    <li class="col-sm-4 col-xs-4 g-full-width--xs s-process-v1 g-margin-b-60--xs g-margin-b-0--md">
                         <div class="center-block g-text-center--xs">
                             <div class="g-margin-b-30--xs">
                                 <span class="g-display-inline-block--xs g-width-100--xs g-height-100--xs g-font-size-38--xs g-bg-color--white g-box-shadow__dark-lightest-v4 g-padding-x-20--xs g-padding-y-20--xs g-radius--circle" style="color: #0079bf">02</span>
                             </div>
                             <div class="g-padding-x-20--xs">
                                 <h3 class="g-font-size-18--xs g-color--white">Round 02</h3>
-                                <p class="g-color--white">Top 100 students across India will
-                                                          be called for final round which
-                                                          will be held during Consortium’20
-                                                          from 21st to 23rd February in
-                                                          VNIT, Nagpur. Students will be
-                                                          judged on the bases of comunication skills, interpersonal skills,
-                                                          etc. through various competitions.</p>
+                                <p class="g-color--white">All the shortlisted participants will get 
+                                                        to avail interesting workshops and webinars
+                                                        on Leadership and Entrepreneurship. This will go on for a period of 2 weeks. Round
+                                                        2 will conclude with a written exam. On the basis of the performance during these 2
+                                                        weeks and the test, further filtration of students will take place for the final round.</p>
                                 <!--<p class="text-uppercase g-font-size-14--xs g-color--white g-font-weight--400 g-letter-spacing--1 g-margin-b-25--xs">21 Jan 19 - 20 Feb 19</p>-->
                                 <div class="g-padding-y-25--xs">
                                   <!--<a id="r2"><button class="text-uppercase s-btn s-btn--md s-btn--white-bg g-radius--50 g-padding-x-20--xs g-margin-r-10--xs g-margin-l-10--xs g-margin-b-10--xs">View Schedule</button></a>-->
@@ -190,7 +189,26 @@
                         </div>
                     </li>
                     <!-- End Process -->
-
+                    <!-- Process -->
+                    <li class="col-sm-4 col-xs-4 g-full-width--xs s-process-v1 g-margin-b-60--xs g-margin-b-0--md">
+                        <div class="center-block g-text-center--xs">
+                            <div class="g-margin-b-30--xs">
+                                <span class="g-display-inline-block--xs g-width-100--xs g-height-100--xs g-font-size-38--xs g-bg-color--white g-box-shadow__dark-lightest-v4 g-padding-x-20--xs g-padding-y-20--xs g-radius--circle" style="color: #0079bf">03</span>
+                            </div>
+                            <div class="g-padding-x-20--xs">
+                                <h3 class="g-font-size-18--xs g-color--white">Round 03</h3>
+                                <p class="g-color--white">The selected students will have boardroom 
+                                                        activities like Group discussions. This will
+                                                        be followed by a personal interview of every student to test their communication
+                                                        skills, problem solving abilities etc.</p>
+                                <!--<p class="text-uppercase g-font-size-14--xs g-color--white g-font-weight--400 g-letter-spacing--1 g-margin-b-25--xs">21 Jan 19 - 20 Feb 19</p>-->
+                                <div class="g-padding-y-25--xs">
+                                  <!--<a id="r2"><button class="text-uppercase s-btn s-btn--md s-btn--white-bg g-radius--50 g-padding-x-20--xs g-margin-r-10--xs g-margin-l-10--xs g-margin-b-10--xs">View Schedule</button></a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- End Process -->
 
 
                 </ul>
@@ -275,7 +293,10 @@
                                   </div>
                                   <div class="cbp-caption-activeWrap faq_con">
                                       <div class="g-color--white-opacity">
-                                          NEO is designed to give school students exposure to the field of entrepreneurship. Preparing for NEO will introduce the students to terms related to finance, marketing, bank, investment, etc. and will also develop their communication skills, interpersonal skills, etc.
+                                      NEO is designed to give school students exposure to the field of entrepreneurship.
+                                    Preparing for NEO will introduce the students to terms related to finance, marketing,
+                                    bank, investment, etc. and will also develop their communication skills, interpersonal
+                                    skills, etc.
                                       </div>
                                   </div>
                               </div>
@@ -283,11 +304,12 @@
                           <div class="cbp-item buying">
                               <div class="cbp-caption">
                                   <div class="s-faq-grid__divider cbp-caption-defaultWrap">
-                                      <h4 class="s-faq-grid__title faq_head">When and where is the final round of NEO?</h4>
+                                      <h4 class="s-faq-grid__title faq_head">How will NEO be conducted amidst the pandemic?</h4>
                                   </div>
                                   <div class="cbp-caption-activeWrap faq_con">
                                       <div class="g-color--white-opacity">
-                                          Consortium is a 3 day Entrepreneurship Summit, which will be held on 21st to 23rd March 2020. Shortlisted students will be called in VNIT for final round.
+                                      All the rounds of NEO will be conducted online. The platform for the same is our
+                                        very own website. Other information will be conveyed on your registered email ids.
                                       </div>
                                   </div>
                               </div>
@@ -297,27 +319,16 @@
                           <div class="cbp-item author">
                               <div class="cbp-caption">
                                   <div class="s-faq-grid__divider cbp-caption-defaultWrap">
-                                      <h4 class="s-faq-grid__title faq_head">What is the eligibility for participating in NEO?</h4>
+                                      <h4 class="s-faq-grid__title faq_head">Who can participate? </h4>
                                   </div>
                                   <div class="cbp-caption-activeWrap faq_con">
                                       <div class="g-color--white-opacity">
-                                          Any school student of class 7th to 10th can participate in NEO
+                                      Any school going student of class 7th to 10th.
                                       </div>
                                   </div>
                               </div>
                           </div>
-                          <div class="cbp-item account">
-                              <div class="cbp-caption">
-                                  <div class="s-faq-grid__divider cbp-caption-defaultWrap">
-                                      <h4 class="s-faq-grid__title faq_head">How much is the registration fees?</h4>
-                                  </div>
-                                  <div class="cbp-caption-activeWrap faq_con">
-                                      <div class="g-color--white-opacity">
-                                          Registration fee for the participants of Nagpur is Rs. 60 and for participants of cities other than Nagpur is Rs. 100.
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
+
                       </div>
                   </div>
                   <div class="col-sm-6">
@@ -330,12 +341,26 @@
                                   </div>
                                   <div class="cbp-caption-activeWrap faq_con">
                                       <div class="g-color--white-opacity">
-                                          Marks will be allotted relatively according to the class of student.
+                                      Marks will be allotted relatively according to the class of student, i.e. top students
+                                    from every class will be shortlisted for the upcoming rounds. This is done to avoid
+                                    biased benefits for higher class students. 
                                       </div>
                                   </div>
                               </div>
                           </div>
-                          <div class="cbp-item copyright">
+                          <div class="cbp-item account">
+                              <div class="cbp-caption">
+                                  <div class="s-faq-grid__divider cbp-caption-defaultWrap">
+                                      <h4 class="s-faq-grid__title faq_head">What are the registration fees?</h4>
+                                  </div>
+                                  <div class="cbp-caption-activeWrap faq_con">
+                                      <div class="g-color--white-opacity">
+                                      The registration fees are INR 100. 
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- <div class="cbp-item copyright">
                               <div class="cbp-caption">
                                   <div class="s-faq-grid__divider cbp-caption-defaultWrap">
                                       <h4 class="s-faq-grid__title faq_head">Will E-cell pay the travelling cost of students during final round in VNIT?</h4>
@@ -347,7 +372,7 @@
                                   </div>
                               </div>
                           </div>
-                      </div>
+                      </div> -->
                   </div>
               </div>
           </div>
@@ -362,32 +387,77 @@
             <div class="g-container--md g-padding-y-20--xs">
                 <div class="g-text-center--xs g-margin-t-40--xs g-margin-b-70--xs">
                     <!--<p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">Contact Us</p>-->
-                    <h2 class="g-font-size-32--xs g-font-size-36--sm g-color--white">Get in Touch</h2>
+                    <h2 class="g-font-size-32--xs g-font-size-40--sm g-color--white">Get in Touch</h2>
                 </div>
 
                 <div id="managers" class="row g-row-col--5 g-margin-b-80--xs">
+                    <div class="g-text-center--xs g-margin-t-40--xs g-margin-b-70--xs">
+                        <!--<p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">Contact Us</p>-->
+                        <h3 class="g-font-size-32--xs g-font-size-30--sm g-color--white">Event Managers</h3>
+                    </div>
                     <div class="col-xs-4 g-full-width--xs g-margin-b-50--xs g-margin-b-0--sm">
                         <div class="g-text-center--xs">
-                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Manas Naik</h4>
-                             <p class="g-color--white">+91 95035 50139<br>manasnaik96@gmail.com</p>
+                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Rashmi Hegde</h4>
+                             <p class="g-color--white">+91 95795 61018<br>rashmiphegde19@gmail.com</p>
                         </div>
                     </div>
                     <div class="col-xs-4 g-full-width--xs g-margin-b-50--xs g-margin-b-0--sm">
                         <div class="g-text-center--xs">
-                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Sanchitee Ladole</h4>
-                             <p class="g-color--white">+91 95112 92761<br>sanchiteeladole@gmail.com</p>
+                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Ratindra Singh</h4>
+                             <p class="g-color--white">+91 82103 16110<br>ratindrasinghrishav@gmail.com </p>
                         </div>
                     </div>
                     <div class="col-xs-4 g-full-width--xs g-margin-b-50--xs g-margin-b-0--sm">
+                        <div class="g-text-center--xs">
+                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Saloni Patil</h4>
+                             <p class="g-color--white">+91 93738 38674<br>salonivpatil2000@gmail.com </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 g-full-width--xs g-margin-b-50--xs g-margin-b-0--sm">
+                        <div class="g-text-center--xs">
+                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Rajat Patni</h4>
+                             <p class="g-color--white">+91 70280 81122<br>rajat.s.patni@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 g-full-width--xs g-margin-b-50--xs g-margin-b-0--sm">
+                        <div class="g-text-center--xs">
+                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Manchukonda Sai Venkat</h4>
+                             <p class="g-color--white">+91 63007 88041<br>msvenkat123@gmail.com </p>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="col-xs-4 g-full-width--xs g-margin-b-50--xs g-margin-b-0--sm">
                         <div class="g-text-center--xs">
                             <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Ved Kotpalliwar</h4>
                             <p class="g-color--white">+91 81048 66608<br>vedkotpalliwar@gmail.com</p>
                         </div>
-                    </div>
-
+                    </div> -->
                 </div>
-
-
+                <div id="managers" class="row g-row-col--5 g-margin-b-80--xs">
+                    <div class="g-text-center--xs g-margin-t-40--xs g-margin-b-70--xs">
+                        <!--<p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">Contact Us</p>-->
+                        <h3 class="g-font-size-32--xs g-font-size-30--sm g-color--white">Web Managers</h3>
+                    </div>
+                    <div class="col-xs-6 g-full-width--xs g-margin-b-50--xs g-margin-b-0--sm">
+                        <div class="g-text-center--xs">
+                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Amit Sawant</h4>
+                            <p class="g-color--white">+91 70581 51253<br>amitsawant2424@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 g-full-width--xs g-margin-b-50--xs g-margin-b-0--sm">
+                        <div class="g-text-center--xs">
+                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Deepak Patil</h4>
+                             <p class="g-color--white">+91 84850 95752<br>patildeep2000@gmail.com </p>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="col-xs-4 g-full-width--xs g-margin-b-50--xs g-margin-b-0--sm">
+                        <div class="g-text-center--xs">
+                            <h4 class="g-font-size-18--xs g-color--white g-margin-b-5--xs">Ved Kotpalliwar</h4>
+                            <p class="g-color--white">+91 81048 66608<br>vedkotpalliwar@gmail.com</p>
+                        </div>
+                    </div> -->
+                </div>
 
 
                 <div class="row g-row-col--5 g-margin-b-10--xs">

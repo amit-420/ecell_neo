@@ -68,6 +68,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css" />
+  <!-- favicon  -->
+  <link rel="shortcut icon" href="../public/img/2.png" type="image/x-icon">
 
 </head>
 

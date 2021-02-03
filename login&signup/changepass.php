@@ -16,6 +16,8 @@ include("config/db.php");
     <!-- Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="../public/img/2.png" type="image/x-icon">
     <style>
         body{
         font-family: 'Montserrat', sans-serif;
