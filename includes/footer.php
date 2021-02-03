@@ -44,8 +44,8 @@
                         </a>
                     </div>
                     <div class="col-sm-12 col-md-4 col-lg-4">
-                            <p class="g-color--white">For Association Opportunities Contact:<br><b>contact@ecellvnit.org</b></p>
-                            <p class="g-color--white">For Sponsorship Opportunities Contact:<br><b>agnikrishnaa@gmail.com<b></b></b></p><b><b>
+                            <p class="g-color--white">For Association Opportunities Contact:<br><b>associate@ecellvnit.org</b></p>
+                            <p class="g-color--white">For Sponsorship Opportunities Contact:<br><b>archis1331@gmail.com<b></b></b></p><b><b>
 
                     </b></b></div><b><b>
                     <div class="col-sm-12 col-md-4 col-lg-4 g-text-right--md">
