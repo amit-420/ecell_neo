@@ -38,17 +38,21 @@ if (isset($_POST['loginButton'])) {
 <head>
 	<meta charset="UTF-8">
 	<title>LOGIN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Bootstrap CSS  -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- eXTERNAL css  -->
 	<link rel="stylesheet" href="assets/css/login.css">
 	<!-- font styles  -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- favicon  -->
+  <link rel="shortcut icon" href="../public/img/2.png" type="image/x-icon">
+  
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="https://neo.ecellvnit.org/">
       <img src="../images/log.png" alt="NEO logo" style="height: 70px;"/>
     </a>
 
@@ -100,7 +104,7 @@ if (isset($_POST['loginButton'])) {
 
         </form>
                 <a href="forgotpass.php" name="forgotButton" class="forgot-password-link">Forgot password?</a>
-                <p class="login-card-footer-text">Don't have an account? <a href="signup.php" name="" class="text-reset">Register here</a></p>
+                <p class="colorLink ">Don't have an account? <a href="signup.php" name="" class=" text-reset"><b>Register here</b></a></p>
                 <nav class="login-card-footer-nav">
 				Copyright: <a href="ecellvnit.org">E-Cell VNIT </a>
                 </nav>
