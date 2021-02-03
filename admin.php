@@ -39,7 +39,8 @@ elseif(isset($_POST['change_exam_status'])){
 }elseif(isset($_POST['submit'])){
     if($_POST['username'] == "ecell" and $_POST['password'] == "password"){
         session_start();
-		$_SESSION['is_admin_logged_in'] = "started_session";
+        $_SESSION['is_admin_logged_in'] = "started_session";
+        $_SESSION['selected_school'] = $_POST['mem_clgname'];
     }else{
         echo "Password or username is incorrect";
     }
@@ -63,6 +64,7 @@ elseif(isset($_POST['change_exam_status'])){
 						<option value="iiit"> iiiT Nagpur</option>
 						<option value="vit"> VIT Nagpur</option>
 						<option value="xyz"> xyz </option>
+                        <option value="others">others</option>
 					</select>
 			</div>
             <input type="submit" name="submit" value="login">
@@ -105,7 +107,7 @@ elseif(isset($_POST['change_exam_status'])){
                         <th>NAME</th>
                         <th>EMAIL</th>
 						<th>PHONE</th>
-                        <th>Collage Name</th>
+                        <th>School Name</th>
                         <th>Payment Status</th>
                         <th>Exam Status</th>
                         <th>Marks</th>
@@ -114,7 +116,8 @@ elseif(isset($_POST['change_exam_status'])){
 				<tbody>
 				
 				<?php
-				$result = mysqli_query($conn,"SELECT * FROM user_login_data ORDER BY mem_clgname,payment_status,exam_status ASC");
+                $mem_clgname = $_SESSION['selected_school'];
+				$result = mysqli_query($conn,"SELECT * FROM user_login_data WHERE mem_clgname = '$mem_clgname' ORDER BY payment_status,exam_status ASC");
 					$i=1;
 					while($row = mysqli_fetch_array($result)){
 				?>
@@ -125,14 +128,18 @@ elseif(isset($_POST['change_exam_status'])){
 					<td><?php echo $row["mem_email"]; ?></td>
 					<td><?php echo $row["mem_number"]; ?></td>
 					<td><?php echo $row["mem_clgname"]; ?></td>
-                    <td><form action="admin.php" method="post">
-                        <input type="hidden" name="mem_email" value="<?php echo $row["mem_email"]?>">
-                        <input type="submit" class="col-md-2" name="change_payment_status" value="<?php echo $row['payment_status'] ?>"/>
-                        </form></td>
-                    <td><form action="admin.php" method="post">
+                    <td>
+                    <!-- <form action="admin.php" method="post">  -->
                     <input type="hidden" name="mem_email" value="<?php echo $row["mem_email"]?>">
-                        <input type="submit" class="col-md-2" name="change_exam_status" value="<?php echo $row['exam_status'] ?>"/>
-                        </form></td>
+                    <input type="submit" class="col-md-2" name="change_payment_status" value="<?php echo $row['payment_status'] ?>"/>
+                    <!-- </form> -->
+                    </td>
+                    <td>
+                    <!-- <form action="admin.php" method="post">  -->
+                    <input type="hidden" name="mem_email" value="<?php echo $row["mem_email"]?>">
+                    <input type="submit" class="col-md-2" name="change_exam_status" value="<?php echo $row['exam_status'] ?>"/>
+                        <!-- </form> -->
+                    </td>
                     <td><?php echo $row["marks"]; ?></td>
                 </td>
                     
