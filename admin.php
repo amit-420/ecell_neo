@@ -114,6 +114,7 @@ elseif(isset($_POST['change_exam_status'])){
                         <th>EMAIL</th>
 						<th>PHONE</th>
                         <th>School Name</th>
+                        <th>Others School</th>
                         <th>Payment Status</th>
                         <th>Exam Status</th>
                         <th>Marks</th>
@@ -136,6 +137,7 @@ elseif(isset($_POST['change_exam_status'])){
 					<td><?php echo $row["mem_email"]; ?></td>
 					<td><?php echo $row["mem_number"]; ?></td>
 					<td><?php echo $row["mem_clgname"]; ?></td>
+                    <td><?php echo $row["optional_school_name"]; ?></td>
                     <td>
                     <!-- <form action="admin.php" method="post">  -->
                     <input type="hidden" name="mem_email" value="<?php echo $row["mem_email"]?>">
