@@ -34,7 +34,7 @@
 
 		
 		
-		$sub="Confirmemail";
+		$sub="Email ID Confirmed";
 		$event="Welcome aboard your email is confirmed";
 		htmlMail($mem_email,$sub,$mem_name,"",$event); //Uncomment after server is online
 		

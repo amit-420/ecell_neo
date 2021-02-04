@@ -6,7 +6,7 @@ include("funs.php");
 $random_verification_code = rand(1000,9999);
 $_SESSION["otp"]=$random_verification_code;
  
-$sub="OTPverify";
+$sub="OTP for Verification";
 $name="Dear Participant";
 $error="";
 $event = "Your OTP:". $_SESSION['otp'] ;

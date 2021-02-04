@@ -72,7 +72,7 @@
 
         $_SESSION['visited_q'] = array();
 
-        $allowed_schools = array("vit","iiiit");
+        $allowed_schools = array("vit","iiiit","others");
 
         $now = time();
         // echo date("d-m-y H:i:s", $now) . "<br>";
