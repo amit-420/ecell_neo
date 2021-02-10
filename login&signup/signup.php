@@ -152,6 +152,7 @@ $(function() {
 				<div class="form-group dropdown">
 					<label for="mem_clgname"></label>
 					<select onchange='checkIfYes()' class="dropbtn" type="button" data-toggle="dropdown" name="mem_clgname" id="mem_clgname" required>
+						<option value="">Select your School</option>
 						<option value="achievers_school"> Achievers School </option>
 						<option value="adarsh_sanskar_vidya_nagpur"> Adarsh Sanskar Vidyalaya, Nagpur</option>
 						<option value="adarsh_vidya_mandir_nagpur"> Adarsh Vidya Mandir, Nagpur </option>
