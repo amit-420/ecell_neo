@@ -152,15 +152,25 @@ $(function() {
 				<div class="form-group dropdown">
 					<label for="mem_clgname"></label>
 					<select onchange='checkIfYes()' class="dropbtn" type="button" data-toggle="dropdown" name="mem_clgname" id="mem_clgname" required>
+						<option value="achievers_school"> Achievers School </option>
 						<option value="adarsh_sanskar_vidya_nagpur"> Adarsh Sanskar Vidyalaya, Nagpur</option>
 						<option value="adarsh_vidya_mandir_nagpur"> Adarsh Vidya Mandir, Nagpur </option>
 						<option value="allen_nagpur"> Allen, Nagpur</option>
 						<option value="dps_lava"> D.P.S, lava </option>
+						<option value="hadas_cbse_school"> Hadas CBSE School </option>
 						<option value="jawahar_navodaya_gondia"> Jawahar Navodaya, Gondia </option>
 						<option value="jnv_ahmednagar"> JNV, Ahmednagar </option>
+						<option value="l_n_soni"> L.N.Soni </option>
 						<option value="mordern_school_koradi"> Mordern School, Koradi Road </option>
+						<option value="r_s_mundle"> R S Mundle </option>
 						<option value="ryan_international_kandivali"> Ryan International, Kandivali </option>
+						<option value="sfs_high_school"> SFS High School </option>
+						<option value="gg_sharda_higher_school"> Smt. G.G Sharda Higher English School </option>
+						<option value="somalwar_school"> Somalwar School </option>
 						<option value="sos_beltarodi_nagur"> SOS (Beltarodi), Nagpur </option>
+						<option value="st_xaviers"> St.Xaviers </option>
+						<option value="star_point_school"> Star Point School </option>
+						<option value="tejaswini_vidyamandir"> Tejaswini Vidyamandir </option>
 						<option value="wardha_wardha"> Wardha School, Wardha </option>
                         <option value="others"> OTHERS </option>
 					</select>
