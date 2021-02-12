@@ -159,6 +159,9 @@ $(function() {
 						<option value="allen_nagpur"> Allen, Nagpur</option>
 						<option value="dps_lava"> D.P.S, lava </option>
 						<option value="hadas_cbse_school"> Hadas CBSE School </option>
+						<option value="icad_amravati"> ICAD, Amravati </option>
+						<option value="icad_nagpur"> ICAD, Nagpur </option>
+						<option value="icad_pune"> ICAD, Pune </option>
 						<option value="jawahar_navodaya_gondia"> Jawahar Navodaya, Gondia </option>
 						<option value="jnv_ahmednagar"> JNV, Ahmednagar </option>
 						<option value="l_n_soni"> L.N.Soni </option>
