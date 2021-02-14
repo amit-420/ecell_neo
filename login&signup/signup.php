@@ -156,6 +156,7 @@ $(function() {
 						<option value="achievers_school"> Achievers School </option>
 						<option value="adarsh_sanskar_vidya_nagpur"> Adarsh Sanskar Vidyalaya, Nagpur</option>
 						<option value="adarsh_vidya_mandir_nagpur"> Adarsh Vidya Mandir, Nagpur </option>
+						<option value="agarval_coaching_classes" >Agarwal Coaching classes, Nagpur</option>
 						<option value="allen_nagpur"> Allen, Nagpur</option>
 						<option value="dps_lava"> D.P.S, lava </option>
 						<option value="hadas_cbse_school"> Hadas CBSE School </option>
@@ -174,6 +175,7 @@ $(function() {
 						<option value="sos_beltarodi_nagur"> SOS (Beltarodi), Nagpur </option>
 						<option value="st_xaviers"> St.Xaviers </option>
 						<option value="star_point_school"> Star Point School </option>
+						<option value="pyramid_tutorials">Pyramid tutorials Nagpur </option>
 						<option value="tejaswini_vidyamandir"> Tejaswini Vidyamandir </option>
 						<option value="wardha_wardha"> Wardha School, Wardha </option>
                         <option value="others"> OTHERS </option>
