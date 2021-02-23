@@ -60,7 +60,7 @@ if ($success === true)
         header("Location: success.php");
         $sub = "Payment Successfull";
         $name = "NEO participant";
-        $event = "Your payment is succesfull";
+        $event = "Your payment is succesfull, your payment ID is: {$_POST['razorpay_payment_id']}\n Follow this link for study material:  https://drive.google.com/drive/folders/1TPiCePY-ij8FrYm36b3Z6ZY0VeEw0JRm ";
         htmlMail($actual_cust_email,$sub,$name,"",$event);
         session_unset();
         session_destroy();
