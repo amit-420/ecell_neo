@@ -30,7 +30,7 @@
             array("20","What is the meaning of ‘at your wits end’.","not knowing what to do","knowing what to do","competent","both b and c"),
 
         );
-        $total_noof_questions = 30;
+        $total_noof_questions = 20;
         $answer_key = array(
             array("1","1"),
             array("2","3"),
