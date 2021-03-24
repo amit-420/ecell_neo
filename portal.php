@@ -204,10 +204,11 @@
                 <label for="option2"><?php echo $option2 ?></label><br>
 
                 <input type="radio" id="option3" name="answer" value="3" <?php echo $checked3?>>
-                <label for="option3"><?php echo $option3 ?></label>
+                <label for="option3"><?php echo $option3 ?></label><br>
                 
-                <input type="radio" id="option3" name="answer" value="3" <?php echo $checked4?>>
-                <label for="option3"><?php echo $option4 ?></label>
+                <input type="radio" id="option4" name="answer" value="4" <?php echo $checked4?>>
+                <label for="option4"><?php echo $option4 ?></label>
+
                 <div class="col-md-6 pl-0">
                   <input type="submit" name="<?php echo $Q_no ?>" value="Save and Next Question" onclick="updateCookie(<?php echo $Q_no ?>)" class="btn btn-dark">
                 </div>
@@ -279,10 +280,10 @@
                 <label for="option2"><?php echo $option2 ?></label><br>
 
                 <input type="radio" id="option3" name="answer" value="3" <?php echo $checked3?>>
-                <label for="option3"><?php echo $option3 ?></label>
+                <label for="option3"><?php echo $option3 ?></label><br>
 
-                <input type="radio" id="option3" name="answer" value="3" <?php echo $checked4?>>
-                <label for="option3"><?php echo $option4 ?></label>
+                <input type="radio" id="option4" name="answer" value="3" <?php echo $checked4?>>
+                <label for="option4"><?php echo $option4 ?></label>
 
                 <div class="col-md-6 pl-0">
                   <input type="submit" name="<?php echo $Q_no ?>" value="Save and Next Question" onclick="updateCookie(<?php echo $Q_no ?>)" class="btn btn-dark">
