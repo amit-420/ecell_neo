@@ -148,8 +148,8 @@
           $option1 = $_SESSION['selected_question_details'][2];
           $option2 = $_SESSION['selected_question_details'][3];
           $option3 = $_SESSION['selected_question_details'][4];
-          $image_url = $_SESSION['selected_question_details'][5];
-          $checked1 = "";$checked2 = "";$checked3 = "";
+          $option4 = $_SESSION['selected_question_details'][5];
+          $checked1 = "";$checked2 = "";$checked3 = "";$checked4 = "";
           // echo "Q" . $Q_no;
           if(isset($_SESSION['answer_of_question'][$Q_no])){
               $previous_answer = $_SESSION['answer_of_question'][$Q_no];
@@ -163,8 +163,11 @@
                   case "3":
                       $checked3 = "checked";
                   break;
+                  case "4":
+                    $checked3 = "checked";
+                break;
                   default:
-                      $checked1 = "";$checked2 = "";$checked3 = "";
+                      $checked1 = "";$checked2 = "";$checked3 = "";$checked4 = "";
                   break;
                   }
           }
@@ -183,13 +186,13 @@
             <p class="question-text" style="font-size: 1.3rem;">
               <strong><?php echo "Q. ". $Q_no . " " ?></strong><?php echo $question ?>
               <?php
-                if($image_url != "")
-                  { ?>
-                    <div class="row">
-                      <img height="400px" width="700px" src=<?php echo $image_url ?> alt="Stickman">
-                    </div>
+                // if($image_url != "")
+                //   { ?>
+                   <!-- <div class="row">
+                     <img height="400px" width="700px" src=<?php //echo $image_url ?> alt="Stickman"> 
+                    </div>-->
 
-              <?php }else{ } ?>
+              <?php //}else{ } ?>
             </p>
 
             <form class="white" action="portal.php" method="POST">
@@ -202,7 +205,9 @@
 
                 <input type="radio" id="option3" name="answer" value="3" <?php echo $checked3?>>
                 <label for="option3"><?php echo $option3 ?></label>
-
+                
+                <input type="radio" id="option3" name="answer" value="3" <?php echo $checked4?>>
+                <label for="option3"><?php echo $option4 ?></label>
                 <div class="col-md-6 pl-0">
                   <input type="submit" name="<?php echo $Q_no ?>" value="Save and Next Question" onclick="updateCookie(<?php echo $Q_no ?>)" class="btn btn-dark">
                 </div>
@@ -256,13 +261,13 @@
             <p class="question-text" style="font-size: 1.3rem;">
               <strong><?php echo "Q. ". $Q_no . " " ?></strong><?php echo $question ?>
               <?php
-                if($image_url != "")
-                  { ?>
-                    <div class="row">
+                //if($image_url != "")
+                  //{ ?>
+                    <!-- <div class="row">
                       <img height="300px" width="300px" src=<?php echo $image_url ?> alt="Stickman">
-                    </div>
+                    </div> -->
 
-              <?php }else{ } ?>
+              <?php //}else{ } ?>
             </p>
 
             <form class="white" action="portal.php" method="POST">
@@ -275,6 +280,9 @@
 
                 <input type="radio" id="option3" name="answer" value="3" <?php echo $checked3?>>
                 <label for="option3"><?php echo $option3 ?></label>
+
+                <input type="radio" id="option3" name="answer" value="3" <?php echo $checked4?>>
+                <label for="option3"><?php echo $option4 ?></label>
 
                 <div class="col-md-6 pl-0">
                   <input type="submit" name="<?php echo $Q_no ?>" value="Save and Next Question" onclick="updateCookie(<?php echo $Q_no ?>)" class="btn btn-dark">
