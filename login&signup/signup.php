@@ -158,6 +158,8 @@ $(function() {
 						<option value="adarsh_vidya_mandir_nagpur"> Adarsh Vidya Mandir, Nagpur </option>
 						<option value="agarval_coaching_classes" >Agarwal Coaching classes, Nagpur</option>
 						<option value="allen_nagpur"> Allen, Nagpur</option>
+						<option value="Bal_shivaji_akola"> Bal Shivaji School Akola </option>
+						<option value="bharat_vidyalay_akola"> Bharat Vidyalaya, Akola </option>
 						<option value="dps_lava"> D.P.S, lava </option>
 						<option value="hadas_cbse_school"> Hadas CBSE School </option>
 						<option value="icad_amravati"> ICAD, Amravati </option>
@@ -165,10 +167,16 @@ $(function() {
 						<option value="icad_pune"> ICAD, Pune </option>
 						<option value="jawahar_navodaya_gondia"> Jawahar Navodaya, Gondia </option>
 						<option value="jnv_ahmednagar"> JNV, Ahmednagar </option>
+						<option value="jubilee_english_high_school_akola"> Jubilee English High School Akola </option>
+						<option value="lifeline_higher_secondary_school_manawar"> Lifeline Higher Secondary School Manawar </option>
+						<option value="lions_junior_college_manawar"> Lions Junior College Manawar </option>
 						<option value="l_n_soni"> L.N.Soni </option>
 						<option value="mordern_school_koradi"> Mordern School, Koradi Road </option>
+						<option value="myboli_coaching_classes"> Myboli Coaching Classes </option>
+						<option value="podar_international_akola"> Podar International, Akola </option>
 						<option value="r_s_mundle"> R S Mundle </option>
 						<option value="ryan_international_kandivali"> Ryan International, Kandivali </option>
+						<option value="samarth_public_school_akola"> Samarth Public School, Akola </option>
 						<option value="sfs_high_school"> SFS High School </option>
 						<option value="gg_sharda_higher_school"> Smt. G.G Sharda Higher English School </option>
 						<option value="somalwar_school"> Somalwar School </option>
@@ -177,6 +185,8 @@ $(function() {
 						<option value="star_point_school"> Star Point School </option>
 						<option value="pyramid_tutorials">Pyramid tutorials Nagpur </option>
 						<option value="tejaswini_vidyamandir"> Tejaswini Vidyamandir </option>
+						<option value="vedant_school_manawar"> Vedant School Manawar </option>
+						<option value="vivekanand_akola"> Vivekanand Akola </option>
 						<option value="wardha_wardha"> Wardha School, Wardha </option>
                         <option value="others"> OTHERS </option>
 					</select>
