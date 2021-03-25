@@ -188,6 +188,7 @@ $(function() {
 						<option value="vedant_school_manawar"> Vedant School Manawar </option>
 						<option value="vivekanand_akola"> Vivekanand Akola </option>
 						<option value="wardha_wardha"> Wardha School, Wardha </option>
+						<option value="vnit"> vnit </option>
                         <option value="others"> OTHERS </option>
 					</select>
 				</div>
