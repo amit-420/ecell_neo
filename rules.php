@@ -34,7 +34,7 @@ if(isset($_POST['to_portal'])){
 
 </head>
     <?php
-    if($_SESSION['payment_status'] == True and $_SESSION['exam_status'] == false and in_array($_SESSION['mem_clgname'],$allowed_schools)and in_array($_SESSION['optional_school_name'],$other_allowed_schools)) {?>
+    if($_SESSION['payment_status'] == True and $_SESSION['exam_status'] == false and in_array($_SESSION['mem_clgname'],$allowed_schools)) {?>
     <body id="rules-body">
       <div class="container align-items-center justify-content-center min-vh-100 pt-5 p-3 rounded">
         <nav class="navbar navbar-expand-lg navbar-light ">
