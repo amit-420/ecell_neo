@@ -61,7 +61,9 @@
 
         $_SESSION['visited_q'] = array();
 
-        $allowed_schools = array("vnit","iiiit");
+        $allowed_schools = array("vnit","iiiit","others");
+
+        $other_allowed_schools = array("Indian Model School","Indian model school solapur");
 
         $now = time();
         // echo date("d-m-y H:i:s", $now) . "<br>";

@@ -34,7 +34,7 @@ if(isset($_POST['to_portal'])){
 
 </head>
     <?php
-    if($_SESSION['payment_status'] == True and $_SESSION['exam_status'] == false and in_array($_SESSION['mem_clgname'],$allowed_schools)) {?>
+    if($_SESSION['payment_status'] == True and $_SESSION['exam_status'] == false and in_array($_SESSION['mem_clgname'],$allowed_schools)and in_array($_SESSION['optional_school_name'],$other_allowed_schools)) {?>
     <body id="rules-body">
       <div class="container align-items-center justify-content-center min-vh-100 pt-5 p-3 rounded">
         <nav class="navbar navbar-expand-lg navbar-light ">
@@ -44,18 +44,27 @@ if(isset($_POST['to_portal'])){
 
         </nav>
           <h2 class=" pt-4">Exam Rules</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Pellentesque vitae tempus velit, sit amet condimentum lacus.
-          In et mi sit amet augue auctor cursus. Ut ultrices, risus
-          sit amet fermentum volutpat, purus purus eleifend ex, id
-          pharetra erat quam eget nibh. Ut facilisis eget felis
-          condimentum imperdiet. Mauris varius, sapien eget posuere
-          imperdiet, metus eros iaculis nunc, at lacinia ex augue non
-          orci. Proin vitae lobortis eros, laoreet consectetur quam. Orci
-          varius natoque penatibus et magnis dis parturient montes,
-          nascetur ridiculus mus. In quis hendrerit mi, nec feugiat
-          sem. Donec a ipsum eu nibh venenatis commodo. Sed non
-          interdum diam, vel scelerisque mi.</p>
+          <p>INSTRUCTIONS FOR EXAM</p> <p>
+          <ol>
+              <li>You will be given 4 options of which 1 will be  correct with 20 questions and 40minutes ( You will be able to attempt the exam only once ).</li>
+
+              <li> Click Save and next after answering each question in order to save and move on to the next question. </li>
+
+              <li> can read the question and skip by clicking on the question palette. </li>
+
+              <li> "Red" - question visited but not answered
+              "Green" - answered and saved
+              White not visited you can change your answered questions any time before final submission  of paper .</li>
+
+              <li> In case of connectivity issues or other technical glitches you get disconnected, you can still give the exam but you have to restart all over again. Your saved data will be lost.</li>
+
+              <li> Do not use any kind of unfair means or any other source of information during the examination. </li>
+
+              <li> Go through all the instructions carefully before starting the exam. </li>
+
+          </ol>
+          
+          </p>
 
           <p>
             <strong class="semi-bold">Make sure you understand the instructions before starting the exam.</strong>
