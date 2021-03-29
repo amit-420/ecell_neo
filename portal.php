@@ -82,7 +82,7 @@
     var nowa = new Date().getTime();
 
    if(localStorage.getItem('deadline') == null){
-        var deadline =  nowa + (1000 * 60 *120 );
+        var deadline =  nowa + (1000 * 60 * 40);
         localStorage.setItem('deadline',deadline)
         // deadline is written only if localstorage is empty
     }
