@@ -97,6 +97,7 @@
 				
 				$_SESSION['no_of_submited_qn'] = array();
 				$_SESSION['mem_clgname'] = $row['mem_clgname']; 
+				$_SESSION['optional_school_name'] = $row['optional_school_name'];
 				
 				$_SESSION['payment_status'] = $row['payment_status'];
 				$_SESSION['exam_status'] = $row['exam_status'];
