@@ -237,7 +237,7 @@
         <div class="row justify-content-end">
           <div class="col-md-6 text-right">
             <form action="portal.php" method="POST">
-              <input type="submit" onclick="return confirm('Are you sure you want to submit and end the test? You can perform this action only once!')" class="btn btn-primary" name="logout" value="Submit">
+              <input type="submit" onclick="return confirm('Are you sure you want to submit and end the test? You can perform this action only once!')" class="btn btn-primary" name="logout" value="End Test">
             </form>
           </div>
 
