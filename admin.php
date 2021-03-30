@@ -166,10 +166,10 @@ elseif(isset($_POST['change_exam_status'])){
 					<td><?php echo $row["mem_clgname"]; ?></td>
                     <td><?php echo $row["optional_school_name"]; ?></td>
                     <td>
-                    <!-- <form action="admin.php" method="post">  -->
+                    <form action="admin.php" method="post"> 
                     <input type="hidden" name="mem_email" value="<?php echo $row["mem_email"]?>">
                     <input type="submit" class="col-md-2" name="change_payment_status" value="<?php echo $row['payment_status'] ?>"/>
-                    <!-- </form> -->
+                    </form> 
                     </td>
                     <td>
                     <!-- <form action="admin.php" method="post">  -->
@@ -264,10 +264,10 @@ else {?>
 					<td><?php echo $row["mem_clgname"]; ?></td>
                     <td><?php echo $row["optional_school_name"]; ?></td>
                     <td>
-                    <!-- <form action="admin.php" method="post">  -->
+                    <form action="admin.php" method="post"> 
                     <input type="hidden" name="mem_email" value="<?php echo $row["mem_email"]?>">
                     <input type="submit" class="col-md-2" name="change_payment_status" value="<?php echo $row['payment_status'] ?>"/>
-                    <!-- </form> -->
+                    </form>
                     </td>
                     <td>
                     <!-- <form action="admin.php" method="post">  -->
