@@ -42,7 +42,7 @@ if(!isset($_COOKIE['marks'])){
         </a>
 
       </nav>
-        <h4 class="text-center"><?php echo 'You have earned total ' . $marks . '    marks'?></h4>
+        <h4 class="text-center"><?php echo 'Thank you. Your response has been succefully recorded'?></h4>
         <form action="thnqu.php" method="POST" class="text-center pt-4">
             <input type="submit" class="btn btn-primary" name="login" value="Login Again" >
         </form>
