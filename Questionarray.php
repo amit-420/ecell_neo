@@ -61,7 +61,7 @@
 
         $_SESSION['visited_q'] = array();
 
-        $allowed_schools = array("vnit","iiiit","others","allen_nagpur");
+        $allowed_schools = array("vnit","iiiit");
 
         $other_allowed_schools = array("Indian Model School","Indian model school solapur");
 
