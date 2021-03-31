@@ -164,7 +164,7 @@
                       $checked3 = "checked";
                   break;
                   case "4":
-                    $checked3 = "checked";
+                    $checked4 = "checked";
                 break;
                   default:
                       $checked1 = "";$checked2 = "";$checked3 = "";$checked4 = "";

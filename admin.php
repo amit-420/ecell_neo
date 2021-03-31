@@ -102,7 +102,7 @@ elseif(isset($_POST['change_exam_status'])){
             <input type="submit" name="submit" value="login">
         </form>
     </html>
-<?php } elseif($_SESSION["mem_clgname"] === "full_database"){ // for Displaying Full Database.
+<?php } elseif($_SESSION["mem_clgname"] == "full_database"){ // for Displaying Full Database.
 ?>
 <!DOCTYPE html>
 <html lang="en">
