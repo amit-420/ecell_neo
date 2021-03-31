@@ -37,7 +37,7 @@ elseif(isset($_POST['change_exam_status'])){
         echo  "Error: " . $sql3 . "<br>" . mysqli_error($conn);
     }
 }elseif(isset($_POST['submit'])){
-    if($_POST['username'] == "ecell" and $_POST['password'] == "password"){
+    if($_POST['username'] == "ecell" and $_POST['password'] == "ecellmanager"){
         session_start();
         $_SESSION['is_admin_logged_in'] = "started_session";
         $_SESSION['selected_school'] = $_POST['mem_clgname'];
