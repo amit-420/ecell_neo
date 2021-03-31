@@ -50,7 +50,9 @@ if(isset($_POST['to_portal'])){
 
               <li> Click Save and next after answering each question in order to save and move on to the next question. </li>
 
-              <li> can read the question and skip by clicking on the question palette. </li>
+              <li> Can read the question and skip by clicking on the question palette. </li>
+
+              <li> Please select option carefully and only if you are 100% sure as you can't deselect an option. </li>
 
               <li> "Red" - question visited but not answered
               "Green" - answered and saved
