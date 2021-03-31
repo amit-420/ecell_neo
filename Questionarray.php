@@ -61,9 +61,38 @@
 
         $_SESSION['visited_q'] = array();
 
-        $allowed_schools = array("vnit","iiiit");
 
-        $other_allowed_schools = array("Indian Model School","Indian model school solapur");
+        $allowed_schools = array("Indian Model School","Indian model school solapur","achievers_school","adarsh_sanskar_vidya_nagpur","adarsh_vidya_mandir_nagpur","agarval_coaching_classes" ,"allen_nagpur",
+        "Bal_shivaji_akola",
+        "bharat_vidyalay_akola",
+        "dps_lava",
+        "hadas_cbse_school",
+        "icad_amravati",
+        "icad_pune",
+        "jawahar_navodaya_gondia",
+        "jnv_ahmednagar",
+        "jubilee_english_high_school_akola",        
+        "lifeline_higher_secondary_school_manawar",
+        "lions_junior_college_manawar",
+        "l_n_soni",
+        "mordern_school_koradi",
+        "myboli_coaching_classes",
+        "podar_international_akola",
+        "r_s_mundle",
+        "ryan_international_kandivali",
+        "samarth_public_school_akola",
+        "sfs_high_school",
+        "gg_sharda_higher_school",
+        "somalwar_school",
+        "sos_beltarodi_nagur",
+        "st_xaviers",
+        "star_point_school",
+        "pyramid_tutorials",
+        "tejaswini_vidyamandir",
+        "vedant_school_manawar",
+        "vivekanand_akola",
+        "wardha_wardha",
+        "others","vnit","iiiit");
 
         $now = time();
         // echo date("d-m-y H:i:s", $now) . "<br>";
