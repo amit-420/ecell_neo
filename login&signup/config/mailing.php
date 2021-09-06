@@ -96,7 +96,7 @@ function htmlMail($t, $sub, $name, $teamname, $event){
                                       </html>";
 
     $url = 'https://startupconclave.ecellvnit.org/send';
-    $data = array('subject' => $subject, 'email' => $to, 'html' => $html, 'pass' => 'Entrepreneurs2020');
+    $data = array('subject' => $subject, 'email' => $to, 'html' => $html, 'pass' => '21Cont@ct22');
 
     // use key 'http' even if you send the request to https://...
     $options = array(
